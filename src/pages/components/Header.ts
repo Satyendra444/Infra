@@ -76,4 +76,73 @@ export class Header {
         await expect(locationOption).toBeVisible();
         await locationOption.click();
     }
+
+    async verifyNavigationItems(navItems: any[]) {
+        for (const item of navItems) {
+            console.log(`Verifying Main Item: ${item.text}`);
+
+            // Found the main item. Use getByText but match carefully around the text.
+            // Since the text in the DOM might have whitespace, we can use exact: false (default).
+            // But to be more specific inside the header, we can scope it.
+            const headerNav = this.page.locator('ul.hidden.lg\\:flex');
+
+            // Note: The structure in the snippet shows:
+            // Link: <a ...> Text<svg></a>
+            // Span: <span ...> Text<svg></span>
+
+            let mainItem;
+            if (item.href) {
+                // If expected href is present, use it for more robust location (avoids encoding issues with text)
+                // Need to match exactly inside the nav container
+                mainItem = headerNav.locator(`a[href="${item.href}"]`).first();
+            } else {
+                // Fallback to text for spans or items without specific href
+                mainItem = headerNav.getByText(item.text).first();
+            }
+
+            await expect(mainItem).toBeVisible();
+
+            if (item.type === 'link' && item.href) {
+                // Verification of href is already implicitly done if we found it by href, but explicit check doesn't hurt.
+                await expect(mainItem).toHaveAttribute('href', item.href);
+            }
+
+            if (item.subItems && item.subItems.length > 0) {
+                // Hover to open dropdown
+                console.log(`  Verifying Sub-items for: ${item.text}`);
+                await mainItem.hover();
+
+                // Wait for dropdown to become visible by waiting for first sub-item
+                const firstSub = item.subItems[0];
+                let firstSubItem;
+                if (firstSub.href) {
+                    firstSubItem = headerNav.locator(`a[href="${firstSub.href}"]`).first();
+                } else {
+                    firstSubItem = headerNav.getByRole('link', { name: firstSub.text }).first();
+                }
+                await firstSubItem.waitFor({ state: 'visible', timeout: 3000 });
+
+                for (const sub of item.subItems) {
+                    console.log(`    Checking sub-item: ${sub.text}`);
+                    // Sub-items are links in the dropdown
+                    // Use href for more reliable location, especially for non-ASCII text
+                    let subItem;
+                    if (sub.href) {
+                        subItem = headerNav.locator(`a[href="${sub.href}"]`).first();
+                    } else {
+                        subItem = headerNav.getByRole('link', { name: sub.text }).first();
+                    }
+
+                    await expect(subItem).toBeVisible();
+                    if (sub.href) {
+                        await expect(subItem).toHaveAttribute('href', sub.href);
+                    }
+                }
+
+                // Move mouse away to close dropdown before next item
+                await this.page.mouse.move(0, 0);
+                await this.page.waitForTimeout(200);
+            }
+        }
+    }
 }

@@ -8,7 +8,53 @@ export const LOCALES = [
         header: {
             logoHref: '/',
             searchPlaceholder: 'Search Construction Equipments',
-            langText: 'English' // Based on user request/snippet
+            langText: 'English',
+            navItems: [
+                {
+                    text: 'Construction Equipments',
+                    href: '/construction-equipments',
+                    type: 'link',
+                    subItems: [
+                        { text: 'New Construction Equipments', href: '/construction-equipments' },
+                        { text: 'Popular Construction Equipments', href: '/popular-construction-equipments' },
+                        { text: 'Compare Construction Equipments', href: '/compare-construction-equipments' }
+                    ]
+                },
+                {
+                    text: 'JCB',
+                    type: 'span',
+                    subItems: [
+                        { text: '3DX', href: '/construction-equipments/jcb/3dx' },
+                        { text: '4DX', href: '/construction-equipments/jcb/4dx' },
+                        { text: '3DX Plus', href: '/construction-equipments/jcb/3dx-plus' },
+                        { text: '3DX Super', href: '/construction-equipments/jcb/3dx-super' },
+                        { text: '3DX Xtra', href: '/construction-equipments/jcb/3dx-xtra' }
+                    ]
+                },
+                {
+                    text: 'BULL',
+                    type: 'span',
+                    subItems: [
+                        { text: 'CH76 Challenger', href: '/construction-equipments/bull/ch76-challenger' },
+                        { text: 'HD 100', href: '/construction-equipments/bull/hd-100' },
+                        { text: 'HD 76', href: '/construction-equipments/bull/hd-76' },
+                        { text: 'SD76', href: '/construction-equipments/bull/sd76' },
+                        { text: 'Crusher King', href: '/construction-equipments/bull/crusher-king' }
+                    ]
+                },
+                {
+                    text: 'ACE',
+                    type: 'span',
+                    subItems: [
+                        { text: 'AX-124', href: '/construction-equipments/ace/ax-124' },
+                        { text: 'AX-124 4WD', href: '/construction-equipments/ace/ax-124-4wd' },
+                        { text: 'AX-124 NS', href: '/construction-equipments/ace/ax-124-ns' },
+                        { text: 'AX-130', href: '/construction-equipments/ace/ax-130' },
+                        { text: 'AF 30E', href: '/construction-equipments/ace/af-30e' }
+                    ]
+                },
+                { text: 'News', href: '/news', type: 'link' }
+            ]
         }
     },
     {
@@ -19,7 +65,53 @@ export const LOCALES = [
         header: {
             logoHref: '/en', // Assuming /en, checking logic later
             searchPlaceholder: 'Search Construction Equipments',
-            langText: 'English'
+            langText: 'English',
+            navItems: [
+                {
+                    text: 'Construction Equipments',
+                    href: '/construction-equipments',
+                    type: 'link',
+                    subItems: [
+                        { text: 'New Construction Equipments', href: '/construction-equipments' },
+                        { text: 'Popular Construction Equipments', href: '/popular-construction-equipments' },
+                        { text: 'Compare Construction Equipments', href: '/compare-construction-equipments' }
+                    ]
+                },
+                {
+                    text: 'JCB',
+                    type: 'span',
+                    subItems: [
+                        { text: '3DX', href: '/construction-equipments/jcb/3dx' },
+                        { text: '4DX', href: '/construction-equipments/jcb/4dx' },
+                        { text: '3DX Plus', href: '/construction-equipments/jcb/3dx-plus' },
+                        { text: '3DX Super', href: '/construction-equipments/jcb/3dx-super' },
+                        { text: '3DX Xtra', href: '/construction-equipments/jcb/3dx-xtra' }
+                    ]
+                },
+                {
+                    text: 'BULL',
+                    type: 'span',
+                    subItems: [
+                        { text: 'CH76 Challenger', href: '/construction-equipments/bull/ch76-challenger' },
+                        { text: 'HD 100', href: '/construction-equipments/bull/hd-100' },
+                        { text: 'HD 76', href: '/construction-equipments/bull/hd-76' },
+                        { text: 'SD76', href: '/construction-equipments/bull/sd76' },
+                        { text: 'Crusher King', href: '/construction-equipments/bull/crusher-king' }
+                    ]
+                },
+                {
+                    text: 'ACE',
+                    type: 'span',
+                    subItems: [
+                        { text: 'AX-124', href: '/construction-equipments/ace/ax-124' },
+                        { text: 'AX-124 4WD', href: '/construction-equipments/ace/ax-124-4wd' },
+                        { text: 'AX-124 NS', href: '/construction-equipments/ace/ax-124-ns' },
+                        { text: 'AX-130', href: '/construction-equipments/ace/ax-130' },
+                        { text: 'AF 30E', href: '/construction-equipments/ace/af-30e' }
+                    ]
+                },
+                { text: 'News', href: '/news', type: 'link' }
+            ]
         }
     },
     {
@@ -30,7 +122,54 @@ export const LOCALES = [
         header: {
             logoHref: '/hi',
             searchPlaceholder: 'कंस्ट्रक्शन इक्विपमेंट्स',
-            langText: 'Hindi'
+            langText: 'Hindi',
+            navItems: [
+                {
+                    text: 'निर्माण उपकरण',
+                    href: '/hi/construction-equipments',
+                    type: 'link',
+                    subItems: [
+                        { text: 'नए निर्माण उपकरण', href: '/hi/construction-equipments' },
+                        { text: 'लोकप्रिय निर्माण उपकरण', href: '/hi/popular-construction-equipments' },
+                        { text: 'निर्माण उपकरण की तुलना करें', href: '/hi/compare-construction-equipments' }
+                    ]
+                },
+                {
+                    text: 'जेसीबी',
+                    type: 'span',
+                    subItems: [
+                        { text: '3डीएक्स', href: '/hi/construction-equipments/jcb/3dx' },
+                        { text: '4डीएक्स', href: '/hi/construction-equipments/jcb/4dx' },
+                        { text: '3डीएक्स प्लस', href: '/hi/construction-equipments/jcb/3dx-plus' },
+                        { text: '3डीएक्स सुपर', href: '/hi/construction-equipments/jcb/3dx-super' },
+                        { text: '3डीएक्स एक्सट्रा', href: '/hi/construction-equipments/jcb/3dx-xtra' }
+                    ]
+                },
+                {
+                    text: 'बुल',
+                    type: 'span',
+                    subItems: [
+                        { text: 'सीएच76 चैलेंजर', href: '/hi/construction-equipments/bull/ch76-challenger' },
+                        { text: 'एचडी 100', href: '/hi/construction-equipments/bull/hd-100' },
+                        { text: 'एचडी 76', href: '/hi/construction-equipments/bull/hd-76' },
+                        { text: 'एसडी 76', href: '/hi/construction-equipments/bull/sd76' },
+                        { text: 'क्रशर किंग', href: '/hi/construction-equipments/bull/crusher-king' }
+                    ]
+                },
+                // {
+                //     text: 'एस',
+                //     type: 'span',
+                //     subItems: [
+                //         { text: 'एएक्स-124', href: '/hi/construction-equipments/ace/ax-124' },
+                //         { text: 'एएक्स-124 4डब्ल्यूडी', href: '/hi/construction-equipments/ace/ax-124-4wd' },
+                //         { text: 'एएक्स-124 एनएस', href: '/hi/construction-equipments/ace/ax-124-ns' },
+                //         { text: 'एएक्स-130', href: '/hi/construction-equipments/ace/ax-130' },
+                //         { text: 'ए एफ 30ई', href: '/hi/construction-equipments/ace/af-30e' }
+                //     ]
+                // },
+                { text: 'समाचार', href: '/hi/news', type: 'link' }
+            ]
         }
     }
 ];
+

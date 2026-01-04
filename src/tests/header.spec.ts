@@ -55,6 +55,12 @@ LOCALES.forEach(({ path, name, header: headerData }) => {
             }
         });
 
+        test('should display and verify navigation menu items', async () => {
+            if (headerData.navItems) {
+                await header.verifyNavigationItems(headerData.navItems);
+            }
+        });
+
         test('should select location', async () => {
             if (name === 'Base' || name === 'English') {
                 await header.selectLocation('delhi', 'New Delhi G.P.O. - New Delhi,');
