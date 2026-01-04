@@ -30,5 +30,35 @@ LOCALES.forEach(({ path, name, header: headerData }) => {
         test('should display Location Selector', async () => {
             await header.verifyLocationSelector();
         });
+
+        test('should perform global search and redirect', async ({ page }) => {
+            // Only run this test if we can predict the outcome, e.g., on Base/English
+            if (name === 'Base' || name === 'English') {
+                await header.searchFor('ace', 'ACE RT 12 Images');
+                await expect(page).toHaveURL(/.*\/construction-equipments\/ace\/rt-12/);
+            }
+        });
+
+        test('should switch language and update URL', async ({ page }) => {
+            // Test flow: Base/English -> Hindi -> English
+            if (name === 'Base') {
+                // Provide explicit expected text because "English" -> "Hindi"
+                await header.switchLanguage('English', 'Hindi');
+                await expect(page).toHaveURL(/.*\/hi/);
+
+                // Go back to English from Hindi page
+                // Note: on /hi page, the current lang is Hindi
+                // Re-initializing header or just using existing methods logic needs care
+                // The header element is effectively the same, just text changes
+                await header.switchLanguage('Hindi', 'English');
+                await expect(page).toHaveURL(/^https:\/\/www\.91infra\.com\/$/);
+            }
+        });
+
+        test('should select location', async () => {
+            if (name === 'Base' || name === 'English') {
+                await header.selectLocation('delhi', 'New Delhi G.P.O. - New Delhi,');
+            }
+        });
     });
 });

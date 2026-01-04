@@ -44,4 +44,36 @@ export class Header {
     async verifyLocationSelector() {
         await expect(this.locationSelector).toBeVisible();
     }
+
+    async searchFor(term: string, resultText: string) {
+        await this.searchInput.click();
+        await this.searchInput.fill(term);
+        // Wait for results to appear and click the specific one
+        const result = this.page.getByText(resultText).first();
+        await expect(result).toBeVisible();
+        await result.click();
+    }
+
+    async switchLanguage(currentLang: string, targetLang: string) {
+        // Open the language switcher if needed, or just verify current
+        await expect(this.languageSwitcher).toContainText(currentLang);
+        await this.languageSwitcher.click();
+
+        // Select target language
+        // Assuming the dropdown options are visible or become visible
+        const targetOption = this.page.getByText(targetLang).last();
+        // Using .last() or similar because 'Hindi' might be present in multiple places (current label + option)
+        await expect(targetOption).toBeVisible();
+        await targetOption.click();
+    }
+
+    async selectLocation(city: string, exactLocation: string) {
+        await this.locationSelector.click();
+        const cityInput = this.page.locator('#city');
+        await cityInput.click();
+        await cityInput.fill(city);
+        const locationOption = this.page.getByText(exactLocation).first(); // Ensure we get the dropdown option
+        await expect(locationOption).toBeVisible();
+        await locationOption.click();
+    }
 }
