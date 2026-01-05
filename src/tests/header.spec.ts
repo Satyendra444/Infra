@@ -34,8 +34,8 @@ LOCALES.forEach(({ path, name, header: headerData }) => {
         test('should perform global search and redirect', async ({ page }) => {
             // Only run this test if we can predict the outcome, e.g., on Base/English
             if (name === 'Base' || name === 'English') {
-                await header.searchFor('ace', 'ACE RT 12 Images');
-                await expect(page).toHaveURL(/.*\/construction-equipments\/ace\/rt-12/);
+                await header.searchFor('ace', 'ACE LC 85');
+                await expect(page).toHaveURL(/.*\/construction-equipments\/ace\/lc-85/);
             }
         });
 

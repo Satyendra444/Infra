@@ -55,6 +55,12 @@ export const LOCALES = [
                 },
                 { text: 'News', href: '/news', type: 'link' }
             ]
+        },
+        masthead: {
+            cardTitle: 'Select Brand',
+            categoryButtonText: 'Construction Equipment',
+            brandPlaceholder: 'Select Brand',
+            searchButtonText: 'Search'
         }
     },
     {
@@ -112,6 +118,12 @@ export const LOCALES = [
                 },
                 { text: 'News', href: '/news', type: 'link' }
             ]
+        },
+        masthead: {
+            cardTitle: 'Select Brand',
+            categoryButtonText: 'Construction Equipment',
+            brandPlaceholder: 'Select Brand',
+            searchButtonText: 'Search'
         }
     },
     {
@@ -169,6 +181,12 @@ export const LOCALES = [
                 // },
                 { text: 'समाचार', href: '/hi/news', type: 'link' }
             ]
+        },
+        masthead: {
+            cardTitle: 'ब्रांड चुनें',
+            categoryButtonText: 'निर्माण उपकरण',
+            brandPlaceholder: 'ब्रांड चुनें',
+            searchButtonText: 'खोजें'
         }
     }
 ];

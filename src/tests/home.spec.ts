@@ -1,17 +1,20 @@
 import { test, expect } from '@playwright/test';
 import { HomePage } from '../pages/HomePage';
+import { Masthead } from '../pages/components/Masthead';
 import { LOCALES } from '../utils/testData';
 
 const BASE_URL = process.env.BASE_URL || 'https://www.91infra.com/';
 
-LOCALES.forEach(({ path, name, expectedTitle, expectedDesc }) => {
+LOCALES.forEach(({ path, name, expectedTitle, expectedDesc, masthead: mastheadData }) => {
     test.describe(`91infra Home Page Tests - ${name} (${path || 'Default'})`, () => {
         let homePage: HomePage;
+        let masthead: Masthead;
         const cleanBaseUrl = BASE_URL.endsWith('/') ? BASE_URL.slice(0, -1) : BASE_URL;
         const fullUrl = path ? `${cleanBaseUrl}/${path}` : BASE_URL;
 
         test.beforeEach(async ({ page }) => {
             homePage = new HomePage(page);
+            masthead = new Masthead(page);
         });
 
         test('should load home page with 200 status code', async ({ page }) => {
@@ -90,6 +93,11 @@ LOCALES.forEach(({ path, name, expectedTitle, expectedDesc }) => {
         test('should display Brand links', async ({ page }) => {
             await homePage.goto(fullUrl);
             await homePage.verifyBrandsSection();
+        });
+
+        test('should display and verify masthead with brand selector', async ({ page }) => {
+            await homePage.goto(fullUrl);
+            await masthead.verifyMasthead(mastheadData);
         });
     });
 });
