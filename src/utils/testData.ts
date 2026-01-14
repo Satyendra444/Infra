@@ -73,6 +73,10 @@ export const LOCALES = [
                 { brand: 'JCB', model: '2DX', href: '/construction-equipments/jcb/2dx', priceContains: '₹18.00 Lakh' },
                 { brand: 'ACE', model: 'AX-130', href: '/construction-equipments/ace/ax-130', priceContains: '₹17.00 Lakh' }
             ]
+        },
+        brands: {
+            heading: 'Search Construction Equipment By Brands',
+            slugs: ['jcb', 'cat', 'ace', 'bobcat', 'bull', 'case', 'escorts']
         }
     },
     {
@@ -148,6 +152,10 @@ export const LOCALES = [
                 { brand: 'JCB', model: '2DX', href: '/construction-equipments/jcb/2dx', priceContains: '₹18.00 Lakh' },
                 { brand: 'ACE', model: 'AX-130', href: '/construction-equipments/ace/ax-130', priceContains: '₹17.00 Lakh' }
             ]
+        },
+        brands: {
+            heading: 'Search Construction Equipment By Brands',
+            slugs: ['jcb', 'cat', 'ace', 'bobcat', 'bull', 'case', 'escorts']
         }
     },
     {
@@ -223,6 +231,10 @@ export const LOCALES = [
                 { brand: 'जेसीबी', model: '2डीएक्स', href: '/hi/construction-equipments/jcb/2dx', priceContains: '₹18.00 Lakh' },
                 { brand: 'एस', model: 'एएक्स-130', href: '/hi/construction-equipments/ace/ax-130', priceContains: '₹17.00 Lakh' }
             ]
+        },
+        brands: {
+            heading: 'ब्रांड के आधार पर निर्माण उपकरण खोजें',
+            slugs: ['jcb', 'cat', 'ace', 'bobcat', 'bull', 'case', 'escorts']
         }
     }
 ];

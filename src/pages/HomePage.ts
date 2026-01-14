@@ -44,8 +44,35 @@ export class HomePage {
         await expect(this.popularCards.first()).toBeVisible();
     }
 
-    async verifyBrandsSection() {
-        // Logic to verify brands are visible
+    async verifyBrandsSection(expectedHeading?: string, expectedBrandSlugs?: string[]) {
+        // Verify heading if provided
+        const brandsContainer = this.page.locator('#brands');
+        if (expectedHeading) {
+            const heading = brandsContainer.locator('h2').first();
+            await expect(heading).toBeVisible();
+            await expect(heading).toHaveText(expectedHeading);
+        }
+
+        // Ensure there is at least one brand link
         await expect(this.brandLinks.first()).toBeVisible();
+
+        if (expectedBrandSlugs && expectedBrandSlugs.length > 0) {
+            for (const slug of expectedBrandSlugs) {
+                // Accept anchors where href contains the brand path with or without locale prefix
+                const sel = `#brands ul li a[href*="/construction-equipments/${slug}"]`;
+                const anchor = this.page.locator(sel).first();
+                await expect(anchor, `brand link for ${slug}`).toBeVisible();
+
+                // Inside anchor, there should be an image with alt/title containing the brand name (case-insensitive)
+                const img = anchor.locator('img').first();
+                await expect(img).toBeVisible();
+
+                // And a label div with the brand name text
+                const label = anchor.locator('div.font-semibold').first();
+                await expect(label).toBeVisible();
+                const labelText = (await label.innerText()).trim();
+                expect(labelText.length).toBeGreaterThan(0);
+            }
+        }
     }
 }

@@ -6,7 +6,7 @@ import { LOCALES } from '../utils/testData';
 
 const BASE_URL = process.env.BASE_URL || 'https://www.91infra.com/';
 
-LOCALES.forEach(({ path, name, expectedTitle, expectedDesc, masthead: mastheadData, popularEquipment: popularEquipmentData }) => {
+LOCALES.forEach(({ path, name, expectedTitle, expectedDesc, masthead: mastheadData, popularEquipment: popularEquipmentData, brands: brandsData }) => {
     test.describe(`91infra Home Page Tests - ${name} (${path || 'Default'})`, () => {
         let homePage: HomePage;
         let masthead: Masthead;
@@ -106,7 +106,12 @@ LOCALES.forEach(({ path, name, expectedTitle, expectedDesc, masthead: mastheadDa
 
         test('should display Brand links', async ({ page }) => {
             await homePage.goto(fullUrl);
-            await homePage.verifyBrandsSection();
+            // Use expected brands from test data if present (supports Base/English/Hindi)
+            if (brandsData) {
+                await homePage.verifyBrandsSection(brandsData.heading, brandsData.slugs);
+            } else {
+                await homePage.verifyBrandsSection();
+            }
         });
 
         test('should display and verify masthead with brand selector', async ({ page }) => {
