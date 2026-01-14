@@ -74,6 +74,17 @@ export const LOCALES = [
                 { brand: 'ACE', model: 'AX-130', href: '/construction-equipments/ace/ax-130', priceContains: '₹17.00 Lakh' }
             ]
         },
+        comparePopular: {
+            sectionTitle: 'Most Popular Comparison',
+            items: [
+                { href: '/compare-construction-equipments/jcb-3dx-vs-tata-hitachi-shinrai', left: { brand: 'JCB', model: '3DX', priceContains: '₹35.00 Lakh' }, right: { brand: 'Tata Hitachi', model: 'Shinrai', priceContains: '₹29.00 Lakh' }, ctaText: 'Compare' },
+                { href: '/compare-construction-equipments/jcb-2dx-vs-jcb-3dx-plus', left: { brand: 'JCB', model: '2DX', priceContains: '₹18.00 Lakh' }, right: { brand: 'JCB', model: '3DX Plus', priceContains: '₹30.00 Lakh' }, ctaText: 'Compare' },
+                { href: '/compare-construction-equipments/jcb-3dx-plus-vs-jcb-3dx-super', left: { brand: 'JCB', model: '3DX Plus', priceContains: '₹30.00 Lakh' }, right: { brand: 'JCB', model: '3DX Super', priceContains: '₹34.00 Lakh' }, ctaText: 'Compare' },
+                { href: '/compare-construction-equipments/cat-424-b2-vs-jcb-3dx', left: { brand: 'CAT', model: '424 B2', priceContains: '₹34.00 Lakh' }, right: { brand: 'JCB', model: '3DX', priceContains: '₹35.00 Lakh' }, ctaText: 'Compare' },
+                { href: '/compare-construction-equipments/jcb-3dx-vs-jcb-3dx-super', left: { brand: 'JCB', model: '3DX', priceContains: '₹35.00 Lakh' }, right: { brand: 'JCB', model: '3DX Super', priceContains: '₹34.00 Lakh' }, ctaText: 'Compare' },
+                { href: '/compare-construction-equipments/case-770-ex-vs-jcb-3dx', left: { brand: 'CASE', model: '770 EX', priceContains: 'Price coming soon' }, right: { brand: 'JCB', model: '3DX', priceContains: '₹35.00 Lakh' }, ctaText: 'Compare' }
+            ]
+        },
         brands: {
             heading: 'Search Construction Equipment By Brands',
             slugs: ['jcb', 'cat', 'ace', 'bobcat', 'bull', 'case', 'escorts']
@@ -153,6 +164,17 @@ export const LOCALES = [
                 { brand: 'ACE', model: 'AX-130', href: '/construction-equipments/ace/ax-130', priceContains: '₹17.00 Lakh' }
             ]
         },
+        comparePopular: {
+            sectionTitle: 'Most Popular Comparison',
+            items: [
+                { href: '/compare-construction-equipments/jcb-3dx-vs-tata-hitachi-shinrai', left: { brand: 'JCB', model: '3DX', priceContains: '₹35.00 Lakh' }, right: { brand: 'Tata Hitachi', model: 'Shinrai', priceContains: '₹29.00 Lakh' }, ctaText: 'Compare' },
+                { href: '/compare-construction-equipments/jcb-2dx-vs-jcb-3dx-plus', left: { brand: 'JCB', model: '2DX', priceContains: '₹18.00 Lakh' }, right: { brand: 'JCB', model: '3DX Plus', priceContains: '₹30.00 Lakh' }, ctaText: 'Compare' },
+                { href: '/compare-construction-equipments/jcb-3dx-plus-vs-jcb-3dx-super', left: { brand: 'JCB', model: '3DX Plus', priceContains: '₹30.00 Lakh' }, right: { brand: 'JCB', model: '3DX Super', priceContains: '₹34.00 Lakh' }, ctaText: 'Compare' },
+                { href: '/compare-construction-equipments/cat-424-b2-vs-jcb-3dx', left: { brand: 'CAT', model: '424 B2', priceContains: '₹34.00 Lakh' }, right: { brand: 'JCB', model: '3DX', priceContains: '₹35.00 Lakh' }, ctaText: 'Compare' },
+                { href: '/compare-construction-equipments/jcb-3dx-vs-jcb-3dx-super', left: { brand: 'JCB', model: '3DX', priceContains: '₹35.00 Lakh' }, right: { brand: 'JCB', model: '3DX Super', priceContains: '₹34.00 Lakh' }, ctaText: 'Compare' },
+                { href: '/compare-construction-equipments/case-770-ex-vs-jcb-3dx', left: { brand: 'CASE', model: '770 EX', priceContains: 'Price coming soon' }, right: { brand: 'JCB', model: '3DX', priceContains: '₹35.00 Lakh' }, ctaText: 'Compare' }
+            ]
+        },
         brands: {
             heading: 'Search Construction Equipment By Brands',
             slugs: ['jcb', 'cat', 'ace', 'bobcat', 'bull', 'case', 'escorts']
@@ -230,6 +252,17 @@ export const LOCALES = [
                 { brand: 'केस', model: '770 एफएक्स', href: '/hi/construction-equipments/case/770-fx', priceContains: '₹33.00 Lakh' },
                 { brand: 'जेसीबी', model: '2डीएक्स', href: '/hi/construction-equipments/jcb/2dx', priceContains: '₹18.00 Lakh' },
                 { brand: 'एस', model: 'एएक्स-130', href: '/hi/construction-equipments/ace/ax-130', priceContains: '₹17.00 Lakh' }
+            ]
+        },
+        comparePopular: {
+            sectionTitle: 'सर्वाधिक लोकप्रिय तुलनाएँ',
+            items: [
+                { href: '/hi/compare-construction-equipments/jcb-3dx-vs-tata-hitachi-shinrai', left: { brand: 'जेसीबी', model: '3डीएक्स', priceContains: '₹35.00 Lakh' }, right: { brand: 'टाटा हिटाची', model: 'शिनराई', priceContains: '₹29.00 Lakh' }, ctaText: 'तुलना करे' },
+                { href: '/hi/compare-construction-equipments/jcb-2dx-vs-jcb-3dx-plus', left: { brand: 'जेसीबी', model: '2डीएक्स', priceContains: '₹18.00 Lakh' }, right: { brand: 'जेसीबी', model: '3डीएक्स प्लस', priceContains: '₹30.00 Lakh' }, ctaText: 'तुलना करे' },
+                { href: '/hi/compare-construction-equipments/jcb-3dx-plus-vs-jcb-3dx-super', left: { brand: 'जेसीबी', model: '3डीएक्स प्लस', priceContains: '₹30.00 Lakh' }, right: { brand: 'जेसीबी', model: '3डीएक्स सुपर', priceContains: '₹34.00 Lakh' }, ctaText: 'तुलना करे' },
+                { href: '/hi/compare-construction-equipments/cat-424-b2-vs-jcb-3dx', left: { brand: 'सीएटी', model: '424 बी2', priceContains: '₹34.00 Lakh' }, right: { brand: 'जेसीबी', model: '3डीएक्स', priceContains: '₹35.00 Lakh' }, ctaText: 'तुलना करे' },
+                { href: '/hi/compare-construction-equipments/jcb-3dx-vs-jcb-3dx-super', left: { brand: 'जेसीबी', model: '3डीएक्स', priceContains: '₹35.00 Lakh' }, right: { brand: 'जेसीबी', model: '3डीएक्स सुपर', priceContains: '₹34.00 Lakh' }, ctaText: 'तुलना करे' },
+                { href: '/hi/compare-construction-equipments/case-770-ex-vs-jcb-3dx', left: { brand: 'केस', model: '770 ईएक्स', priceContains: 'कीमत जल्द ही आ रही है' }, right: { brand: 'जेसीबी', model: '3डीएक्स', priceContains: '₹35.00 Lakh' }, ctaText: 'तुलना करे' }
             ]
         },
         brands: {
