@@ -1,20 +1,23 @@
 import { test, expect } from '@playwright/test';
 import { HomePage } from '../pages/HomePage';
 import { Masthead } from '../pages/components/Masthead';
+import { PopularEquipment } from '../pages/components/PopularEquipment';
 import { LOCALES } from '../utils/testData';
 
 const BASE_URL = process.env.BASE_URL || 'https://www.91infra.com/';
 
-LOCALES.forEach(({ path, name, expectedTitle, expectedDesc, masthead: mastheadData }) => {
+LOCALES.forEach(({ path, name, expectedTitle, expectedDesc, masthead: mastheadData, popularEquipment: popularEquipmentData }) => {
     test.describe(`91infra Home Page Tests - ${name} (${path || 'Default'})`, () => {
         let homePage: HomePage;
         let masthead: Masthead;
+        let popularEquipment: PopularEquipment;
         const cleanBaseUrl = BASE_URL.endsWith('/') ? BASE_URL.slice(0, -1) : BASE_URL;
         const fullUrl = path ? `${cleanBaseUrl}/${path}` : BASE_URL;
 
         test.beforeEach(async ({ page }) => {
             homePage = new HomePage(page);
             masthead = new Masthead(page);
+            popularEquipment = new PopularEquipment(page);
         });
 
         test('should load home page with 200 status code', async ({ page }) => {
@@ -98,6 +101,11 @@ LOCALES.forEach(({ path, name, expectedTitle, expectedDesc, masthead: mastheadDa
         test('should display and verify masthead with brand selector', async ({ page }) => {
             await homePage.goto(fullUrl);
             await masthead.verifyMasthead(mastheadData);
+        });
+
+        test('should display and verify popular equipment section', async ({ page }) => {
+            await homePage.goto(fullUrl);
+            await popularEquipment.verifyPopularSection(popularEquipmentData);
         });
     });
 });

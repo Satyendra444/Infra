@@ -61,6 +61,18 @@ export const LOCALES = [
             categoryButtonText: 'Construction Equipment',
             brandPlaceholder: 'Select Brand',
             searchButtonText: 'Search'
+        },
+        popularEquipment: {
+            sectionTitle: 'Most Popular Construction Equipment',
+            tabButtonText: 'Popular',
+            ctaButtonText: 'View On Road Price',
+            footerLinkText: 'View All Popular Construction Equipments',
+            footerLinkHref: '/popular-construction-equipments',
+            sampleCards: [
+                { brand: 'CASE', model: '770 FX', href: '/construction-equipments/case/770-fx', priceContains: '₹33.00 Lakh' },
+                { brand: 'JCB', model: '2DX', href: '/construction-equipments/jcb/2dx', priceContains: '₹18.00 Lakh' },
+                { brand: 'ACE', model: 'AX-130', href: '/construction-equipments/ace/ax-130', priceContains: '₹17.00 Lakh' }
+            ]
         }
     },
     {
@@ -124,6 +136,18 @@ export const LOCALES = [
             categoryButtonText: 'Construction Equipment',
             brandPlaceholder: 'Select Brand',
             searchButtonText: 'Search'
+        },
+        popularEquipment: {
+            sectionTitle: 'Most Popular Construction Equipment',
+            tabButtonText: 'Popular',
+            ctaButtonText: 'View On Road Price',
+            footerLinkText: 'View All Popular Construction Equipments',
+            footerLinkHref: '/popular-construction-equipments',
+            sampleCards: [
+                { brand: 'CASE', model: '770 FX', href: '/construction-equipments/case/770-fx', priceContains: '₹33.00 Lakh' },
+                { brand: 'JCB', model: '2DX', href: '/construction-equipments/jcb/2dx', priceContains: '₹18.00 Lakh' },
+                { brand: 'ACE', model: 'AX-130', href: '/construction-equipments/ace/ax-130', priceContains: '₹17.00 Lakh' }
+            ]
         }
     },
     {
@@ -187,6 +211,18 @@ export const LOCALES = [
             categoryButtonText: 'निर्माण उपकरण',
             brandPlaceholder: 'ब्रांड चुनें',
             searchButtonText: 'खोजें'
+        },
+        popularEquipment: {
+            sectionTitle: 'लोकप्रिय निर्माण उपकरण',
+            tabButtonText: 'लोकप्रिय',
+            ctaButtonText: 'ऑन-रोड कीमत देखें',
+            footerLinkText: 'सभी लोकप्रिय निर्माण उपकरण को देखें',
+            footerLinkHref: '/hi/popular-construction-equipments',
+            sampleCards: [
+                { brand: 'केस', model: '770 एफएक्स', href: '/hi/construction-equipments/case/770-fx', priceContains: '₹33.00 Lakh' },
+                { brand: 'जेसीबी', model: '2डीएक्स', href: '/hi/construction-equipments/jcb/2dx', priceContains: '₹18.00 Lakh' },
+                { brand: 'एस', model: 'एएक्स-130', href: '/hi/construction-equipments/ace/ax-130', priceContains: '₹17.00 Lakh' }
+            ]
         }
     }
 ];

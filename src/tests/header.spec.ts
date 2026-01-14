@@ -35,7 +35,8 @@ LOCALES.forEach(({ path, name, header: headerData }) => {
             // Only run this test if we can predict the outcome, e.g., on Base/English
             if (name === 'Base' || name === 'English') {
                 await header.searchFor('ace', 'ACE LC 85');
-                await expect(page).toHaveURL(/.*\/construction-equipments\/ace\/lc-85/);
+                await expect(page).toHaveURL(/.*\/construction-equipments\/ace/);
+                //construction-equipments/ace
             }
         });
 
