@@ -21,10 +21,18 @@ npm install
 Run the full test suite (Chromium is configured by default):
 
 ```bash
+npm test
+# or
 npx playwright test --project=chromium
 ```
 
-Run a single test file:
+Run against the dev environment using the convenience npm script:
+
+```bash
+npm run test:dev
+```
+
+Run a single test file (uses baseURL from config):
 
 ```bash
 npx playwright test src/tests/header.spec.ts --project=chromium
@@ -33,7 +41,23 @@ npx playwright test src/tests/header.spec.ts --project=chromium
 Open the HTML report after a run:
 
 ```bash
+npm run test:report
+# or
 npx playwright show-report
+```
+
+Environment note: the tests use `baseURL` from `playwright.config.ts`, which falls back to production by default. To override the URL manually, set the `BASE_URL` environment variable:
+
+Windows (PowerShell):
+
+```powershell
+$env:BASE_URL = 'https://dev.91infra.com/'; npm test
+```
+
+macOS / Linux:
+
+```bash
+BASE_URL=https://dev.91infra.com/ npm test
 ```
 
 ---
@@ -113,6 +137,8 @@ npx playwright show-trace trace.zip
 ```
 
 - The `verbose-failure-reporter` listens for failed tests and extracts these labels from the thrown errors. When a test fails it prints a one-line summary with the parsed **Expected** and **Actual** values for quick triage in CI logs.
+
+- Note: some schema values on the dev environment may still reference production (www) hosts. The LD+JSON tests accept either the configured `BASE_URL` hostname or the production hostname when running against dev to avoid false negatives.
 
 ---
 
