@@ -52,7 +52,10 @@ LOCALES.forEach(({ path, name, header: headerData }) => {
                 // Re-initializing header or just using existing methods logic needs care
                 // The header element is effectively the same, just text changes
                 await header.switchLanguage('Hindi', 'English');
-                await expect(page).toHaveURL(/^https:\/\/www\.91infra\.com\/$/);
+                // Expect the page to return to the configured base URL (handles dev/prod)
+                const rootEscaped = cleanBaseUrl.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+                const rootRegex = new RegExp(`^${rootEscaped}\\/?$`);
+                await expect(page).toHaveURL(rootRegex);
             }
         });
 

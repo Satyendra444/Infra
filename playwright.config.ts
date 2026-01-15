@@ -25,8 +25,9 @@ export default defineConfig({
   reporter: [['html'], ['./src/reporters/verbose-failure-reporter.ts']],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
-    /* Base URL to use in actions like `await page.goto('')`. */
-    // baseURL: 'http://localhost:3000',
+    /* Base URL to use in actions like `await page.goto('')`.
+       This respects the environment variable BASE_URL if set; otherwise defaults to production. */
+    baseURL: process.env.BASE_URL || 'https://www.91infra.com/',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
