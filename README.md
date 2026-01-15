@@ -73,17 +73,28 @@ Top-level files:
 
 Source files:
 
-- `src/tests/` — test files:
+- `src/tests/` — test files (all parameterized across `Base`, `English`, and `Hindi` locales):
   - `header.spec.ts` — header-related UI tests (logo, global search, language switch, location selector, navigation items).
   - `home.spec.ts` — home page tests (SEO metadata, brand/masthead checks, popular equipment section).
+  - `brands.spec.ts` — brand section tests (display and navigation for brand listings).
+  - `compare-popular.spec.ts` — popular comparison section tests (display and navigation for comparison cards).
+  - `news.spec.ts` — latest news section tests (display, article metadata validation, navigation, footer link).
 
 - `src/pages/` — Page Objects and components:
   - `components/Header.ts` — Encapsulates header interactions and verifications: logo validation, global search helper (`searchFor`), language switch, location selector, and navigation verification.
-  - `pages/HomePage.ts` — (if present) page object(s) for the home page sections; used by `home.spec.ts`.
+  - `components/PopularEquipment.ts` — Verifies the most popular equipment section (display, tab buttons, product cards, footer link).
+  - `components/NewsSection.ts` — Verifies the latest news section (section heading, tab button, article cards with images, titles, excerpts, author/date, read time, footer link).
+  - `pages/HomePage.ts` — Home page page object; encapsulates verification of popular equipment, compare popular, and brands sections; used by `home.spec.ts`.
 
 - `src/fixtures/` — (optional) Playwright fixtures if present to provide shared setup/teardown or injected data.
 
-- `src/utils/testData.ts` — Test data and locale definitions (used to parametrize tests across `Base`, `English`, and `Hindi`).
+- `src/utils/testData.ts` — Test data and locale definitions (parametrizes tests across `Base` (default), `English` (en), and `Hindi` (hi) locales). Contains test data for:
+  - Header (logo, search placeholder, language, navigation items by locale).
+  - Masthead (card title, category/brand placeholders).
+  - Popular Equipment (section title, tab button, footer link, sample cards with prices and hrefs).
+  - Latest News (section title, tab button, footer link, sample articles with href, title, excerpt, author, date, read time).
+  - Compare Popular (section title, comparison items with left/right products and CTAs).
+  - Brands (section heading, brand slugs for brand page tests).
 
 - `src/utils/assertions.ts` — Centralized assertion helpers used across page objects and tests. These helpers:
   - Provide clearer, consistent error messages in the format: `[AssertionError] <context> | Expected: <expected> | Actual: <actual>`
@@ -97,24 +108,50 @@ Source files:
 ## 🧪 How the tests are structured & how they run
 
 - Tests are written using Playwright Test (`test`, `expect`) and use Page Objects to keep UI logic in `src/pages`.
-- Tests are parameterized using `LOCALES` from `src/utils/testData.ts` — so the header/home tests run for multiple locales (Base/English/Hindi) automatically.
+- Tests are **parameterized using `LOCALES`** from `src/utils/testData.ts` — the test suite automatically runs each test across multiple locales (`Base`, `English`, `Hindi`).
+  - Example: 1 test written once runs 3 times (once per locale).
+  - Locale-specific URLs are built from `path` in `LOCALES` (e.g., `BASE_URL`, `BASE_URL/en`, `BASE_URL/hi`).
+  - Some tests (e.g., `news.spec.ts`) may filter to specific locales where data is available.
 - Playwright config (`playwright.config.ts`) registers the **HTML** reporter and the custom `verbose-failure-reporter` which prints extra details for failed tests.
+
+### Test Coverage by Section
+
+| Section | Locales | Tests | Details |
+|---------|---------|-------|---------|
+| Header | Base, English, Hindi | ✅ `header.spec.ts` | Logo, search (with fallback), language switch, location selector, nav items |
+| SEO / Home | Base, English, Hindi | ✅ `home.spec.ts` | Page title, description, brand/masthead, popular equipment, compare popular, brands |
+| Popular Equipment | Base, English, Hindi | ✅ `home.spec.ts` | Section display, tab button, product cards, footer link, navigation |
+| Compare Popular | Base, English, Hindi | ✅ `compare-popular.spec.ts` | Section display, comparison items (left/right products), footer link, navigation |
+| Brands | Base, English, Hindi | ✅ `brands.spec.ts` | Section display, brand links, navigation to brand pages |
+| Latest News | Base, English, Hindi | ✅ `news.spec.ts` | Section display, article metadata (title, excerpt, author, date, read time), footer link, navigation |
 
 Best practices in this repo:
 - Keep selectors scoped in page objects (avoid scattered raw selectors in tests).
 - Use the assertion helpers in `src/utils/assertions.ts` for consistent failure messages.
 - Keep `searchFor` resilient — the header search library includes a fallback when an exact suggestion isn't found.
+- Parametrize tests across locales using `LOCALES` and `.filter()` to subset as needed (e.g., `news.spec.ts` includes only `Base`, `English`, and `Hindi`).
+- Use locale-aware test data from `src/utils/testData.ts` to ensure strings match the actual UI in each language.
 
 ---
 
 ## 🛠️ Developer tips & how to add tests
 
-1. Add a new Page Object in `src/pages` for a new area of the site.
-2. Use the helper assertions from `src/utils/assertions.ts` for verifications.
-3. Add tests in `src/tests/` and import the page object.
-4. Run locally with `npx playwright test <file>` or the entire suite.
+### Adding a new test
 
-To run a test and generate trace/screenshots for debugging:
+1. **Add test data** in `src/utils/testData.ts` under the appropriate `LOCALES` object (e.g., for `Base`, `English`, `Hindi`).
+   - Use consistent keys across all locales (e.g., if you add `mySection` to `Base`, add it to `English` and `Hindi` too, even if empty).
+2. **Create a Page Object** in `src/pages/components/` (or `src/pages/`) to encapsulate UI interactions and verifications for that section.
+3. **Write tests** in `src/tests/` using the locale-aware pattern (see `news.spec.ts` or `compare-popular.spec.ts`):
+   ```typescript
+   LOCALES.filter(l => ['Base', 'English', 'Hindi'].includes(l.name)).forEach(({ path, name, mySection }) => {
+       test.describe(`My Section - ${name} (${path || 'Default'})`, () => {
+           // ... tests
+       });
+   });
+   ```
+4. Run locally with `npx playwright test src/tests/mytest.spec.ts --project=chromium` or the entire suite with `npm test`.
+
+### Debugging a test
 
 ```bash
 npx playwright test <test> --trace on --project=chromium
