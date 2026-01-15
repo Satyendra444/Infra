@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../pages/HomePage';
-import { Masthead } from '../pages/components/Masthead';
-import { PopularEquipment } from '../pages/components/PopularEquipment';
-import { LOCALES } from '../utils/testData';
+import { HomePage } from '../../pages/home/HomePage';
+import { Masthead } from '../../pages/sections/Masthead';
+import { PopularEquipmentsSection } from '../../pages/sections/PopularEquipmentsSection';
+import { LOCALES } from '../../utils/testData';
 
 const BASE_URL = process.env.BASE_URL || 'https://www.91infra.com/';
 
@@ -10,14 +10,14 @@ LOCALES.forEach(({ path, name, expectedTitle, expectedDesc, masthead: mastheadDa
     test.describe(`91infra Home Page Tests - ${name} (${path || 'Default'})`, () => {
         let homePage: HomePage;
         let masthead: Masthead;
-        let popularEquipment: PopularEquipment;
+        let popularEquipment: PopularEquipmentsSection;
         const cleanBaseUrl = BASE_URL.endsWith('/') ? BASE_URL.slice(0, -1) : BASE_URL;
         const fullUrl = path ? `${cleanBaseUrl}/${path}` : BASE_URL;
 
         test.beforeEach(async ({ page }) => {
             homePage = new HomePage(page);
             masthead = new Masthead(page);
-            popularEquipment = new PopularEquipment(page);
+            popularEquipment = new PopularEquipmentsSection(page);
         });
 
         test('should load home page with 200 status code', async ({ page }) => {
@@ -44,8 +44,6 @@ LOCALES.forEach(({ path, name, expectedTitle, expectedDesc, masthead: mastheadDa
             const webPageEntity = schema.find((item: any) => item['@type'] === 'WebPage');
             expect(webPageEntity, 'WebPage schema missing').toBeDefined();
             expect(webPageEntity['@context']).toBe('https://schema.org');
-            // The URL in the snippet was hardcoded to base, but logically might change.
-            // For regression, we verify it exists and is valid string.
             expect(typeof webPageEntity.url).toBe('string');
             expect(webPageEntity.name).toBe(expectedTitle);
             expect(webPageEntity.description).toBe(expectedDesc);
@@ -65,7 +63,6 @@ LOCALES.forEach(({ path, name, expectedTitle, expectedDesc, masthead: mastheadDa
             expect(orgEntity, 'Organization schema missing').toBeDefined();
             expect(orgEntity['@context']).toBe('https://schema.org');
             expect(orgEntity.name).toBe('91infra');
-            // Allow org URL to match the configured BASE_URL hostname (supports dev vs prod)
             expect(typeof orgEntity.url).toBe('string');
             const orgHostname = new URL(orgEntity.url).hostname;
             const baseHostname = new URL(BASE_URL).hostname;
@@ -90,7 +87,6 @@ LOCALES.forEach(({ path, name, expectedTitle, expectedDesc, masthead: mastheadDa
             expect(webSiteEntity, 'WebSite schema missing').toBeDefined();
             expect(webSiteEntity['@context']).toBe('https://schema.org/');
             expect(webSiteEntity.name).toBe('91infra');
-            // Accept WebSite URL if hostname matches configured BASE_URL (or allow production host for dev)
             expect(typeof webSiteEntity.url).toBe('string');
             const siteHostname = new URL(webSiteEntity.url).hostname;
             const allowedSiteHosts = [new URL(BASE_URL).hostname];
@@ -106,7 +102,6 @@ LOCALES.forEach(({ path, name, expectedTitle, expectedDesc, masthead: mastheadDa
 
         test('should display Brand links', async ({ page }) => {
             await homePage.goto(fullUrl);
-            // Use expected brands from test data if present (supports Base/English/Hindi)
             if (brandsData) {
                 await homePage.verifyBrandsSection(brandsData.heading, brandsData.slugs);
             } else {

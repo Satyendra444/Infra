@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { Header } from '../pages/components/Header';
-import { LOCALES } from '../utils/testData';
+import { Header } from '../../pages/common/Header';
+import { LOCALES } from '../../utils/testData';
 
 const BASE_URL = process.env.BASE_URL || 'https://www.91infra.com/';
 
