@@ -162,6 +162,26 @@ export const LOCALES = [
                     icons: ['facebook', 'insta', 'linkedin', 'youtube']
                 }
             }
+        },
+        seo: {
+            title: 'New Construction Equipment, Latest Construction Equipment News in India',
+            description: 'Thinking of buying a Construction Equipment? 91Infra helps you in researching with reviews, specifications, customer ratings all in one place.',
+            ogTitle: 'New Construction Equipment, Latest Construction Equipment News in India',
+            ogDescription: 'Thinking of buying a Construction Equipment? 91Infra helps you in researching with reviews, specifications, customer ratings all in one place.',
+            ogImage: 'https://images.91infra.com/banner/91infra-masthead-without-logo1440x450png_1716197957.png',
+            ogUrl: 'https://www.91infra.com/',
+            ogType: 'website',
+            twitterTitle: 'New Construction Equipment, Latest Construction Equipment News in India',
+            twitterDescription: 'Thinking of buying a Construction Equipment? 91Infra helps you in researching with reviews, specifications, customer ratings all in one place.',
+            twitterImage: 'https://images.91infra.com/banner/91infra-masthead-without-logo1440x450png_1716197957.png',
+            twitterCard: 'summary_large_image',
+            robots: 'index, follow',
+            canonical: '/',
+            hreflangs: [
+                { lang: 'en', href: 'https://www.91infra.com/' },
+                { lang: 'hi', href: 'https://www.91infra.com/hi/' },
+                { lang: 'x-default', href: 'https://www.91infra.com/' }
+            ]
         }
     },
     {
@@ -326,6 +346,26 @@ export const LOCALES = [
                     icons: ['facebook', 'insta', 'linkedin', 'youtube']
                 }
             }
+        },
+        seo: {
+            title: 'New Construction Equipment, Latest Construction Equipment News in India',
+            description: 'Thinking of buying a Construction Equipment? 91Infra helps you in researching with reviews, specifications, customer ratings all in one place.',
+            ogTitle: 'New Construction Equipment, Latest Construction Equipment News in India',
+            ogDescription: 'Thinking of buying a Construction Equipment? 91Infra helps you in researching with reviews, specifications, customer ratings all in one place.',
+            ogImage: 'https://images.91infra.com/banner/91infra-masthead-without-logo1440x450png_1716197957.png',
+            ogUrl: 'https://www.91infra.com/',
+            ogType: 'website',
+            twitterTitle: 'New Construction Equipment, Latest Construction Equipment News in India',
+            twitterDescription: 'Thinking of buying a Construction Equipment? 91Infra helps you in researching with reviews, specifications, customer ratings all in one place.',
+            twitterImage: 'https://images.91infra.com/banner/91infra-masthead-without-logo1440x450png_1716197957.png',
+            twitterCard: 'summary_large_image',
+            robots: 'index, follow',
+            canonical: '/',
+            hreflangs: [
+                { lang: 'en', href: 'https://www.91infra.com/' },
+                { lang: 'hi', href: 'https://www.91infra.com/hi/' },
+                { lang: 'x-default', href: 'https://www.91infra.com/' }
+            ]
         }
     },
     {
@@ -370,17 +410,6 @@ export const LOCALES = [
                         { text: 'क्रशर किंग', href: '/hi/construction-equipments/bull/crusher-king' }
                     ]
                 },
-                // {
-                //     text: 'एस',
-                //     type: 'span',
-                //     subItems: [
-                //         { text: 'एएक्स-124', href: '/hi/construction-equipments/ace/ax-124' },
-                //         { text: 'एएक्स-124 4डब्ल्यूडी', href: '/hi/construction-equipments/ace/ax-124-4wd' },
-                //         { text: 'एएक्स-124 एनएस', href: '/hi/construction-equipments/ace/ax-124-ns' },
-                //         { text: 'एएक्स-130', href: '/hi/construction-equipments/ace/ax-130' },
-                //         { text: 'ए एफ 30ई', href: '/hi/construction-equipments/ace/af-30e' }
-                //     ]
-                // },
                 { text: 'समाचार', href: '/hi/news', type: 'link' }
             ]
         },
@@ -464,7 +493,7 @@ export const LOCALES = [
                     ]
                 },
                 workWithUs: {
-                    title: 'हमारे साथ काम करें',
+                    title: ' हमारे साथ काम करें',
                     links: [
                         { text: 'हमारे साथ विज्ञापन करें', href: '/hi/advertise' },
                         { text: 'प्रतिक्रिया', href: '/hi/feedback' },
@@ -490,6 +519,26 @@ export const LOCALES = [
                     icons: ['facebook', 'insta', 'linkedin', 'youtube']
                 }
             }
+        },
+        seo: {
+            title: 'नए निर्माण उपकरण, भारत में नवीनतम वाणिज्यिक वाहन समाचार',
+            description: 'निर्माण उपकरण खरीदने की सोच रहे हैं? 91इन्फ्रा आपको एक ही स्थान पर समीक्षा, विशिष्टताओं, ग्राहक रेटिंग के साथ शोध करने में मदद करता है।',
+            ogTitle: 'नए निर्माण उपकरण, भारत में नवीनतम वाणिज्यिक वाहन समाचार',
+            ogDescription: 'निर्माण उपकरण खरीदने की सोच रहे हैं? 91इन्फ्रा आपको एक ही स्थान पर समीक्षा, विशिष्टताओं, ग्राहक रेटिंग के साथ शोध करने में मदद करता है।',
+            ogImage: 'https://images.91infra.com/banner/91infra-masthead-without-logo1440x450png_1716197957.png',
+            ogUrl: 'https://www.91infra.com/',
+            ogType: 'website',
+            twitterTitle: 'नए निर्माण उपकरण, भारत में नवीनतम वाणिज्यिक वाहन समाचार',
+            twitterDescription: 'निर्माण उपकरण खरीदने की सोच रहे हैं? 91इन्फ्रा आपको एक ही स्थान पर समीक्षा, विशिष्टताओं, ग्राहक रेटिंग के साथ शोध करने में मदद करता है।',
+            twitterImage: 'https://images.91infra.com/banner/91infra-masthead-without-logo1440x450png_1716197957.png',
+            twitterCard: 'summary_large_image',
+            robots: 'index, follow',
+            canonical: '/hi',
+            hreflangs: [
+                { lang: 'en', href: 'https://www.91infra.com/' },
+                { lang: 'hi', href: 'https://www.91infra.com/hi/' },
+                { lang: 'x-default', href: 'https://www.91infra.com/' }
+            ]
         }
     }
 ];

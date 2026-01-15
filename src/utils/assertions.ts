@@ -55,3 +55,34 @@ export async function assertUrl(page: Page, expected: RegExp | string, context =
         throw new Error(buildMessage(context, String(expected), actual));
     }
 }
+
+export async function assertMeta(page: Page, nameOrProperty: string, expected: string, isProperty = false) {
+    const selector = isProperty ? `meta[property="${nameOrProperty}"]` : `meta[name="${nameOrProperty}"]`;
+    const locator = page.locator(selector).first();
+    try {
+        await expect(locator).toHaveAttribute('content', expected);
+    } catch (err: any) {
+        const actual = await locator.getAttribute('content').catch(() => 'missing');
+        throw new Error(buildMessage(`meta ${nameOrProperty}`, expected, actual ?? 'missing'));
+    }
+}
+
+export async function assertLink(page: Page, rel: string, expectedHref: string, attr = 'rel') {
+    const locator = page.locator(`link[${attr}="${rel}"]`).first();
+    try {
+        await expect(locator).toHaveAttribute('href', expectedHref);
+    } catch (err: any) {
+        const actual = await locator.getAttribute('href').catch(() => 'missing');
+        throw new Error(buildMessage(`link ${rel}`, expectedHref, actual ?? 'missing'));
+    }
+}
+
+export async function assertHreflang(page: Page, lang: string, expectedHref: string) {
+    const locator = page.locator(`link[rel="alternate"][hreflang="${lang}"]`).first();
+    try {
+        await expect(locator).toHaveAttribute('href', expectedHref);
+    } catch (err: any) {
+        const actual = await locator.getAttribute('href').catch(() => 'missing');
+        throw new Error(buildMessage(`hreflang ${lang}`, expectedHref, actual ?? 'missing'));
+    }
+}

@@ -7,8 +7,6 @@ export class Footer {
 
     constructor(page: Page) {
         this.page = page;
-        // Find the footer area by looking for a container that has "About 91Infra" or its Hindi equivalent
-        // and also contains the copyright text.
         this.footerContainer = page.locator('div, section').filter({
             has: page.locator('h3').filter({ hasText: /About 91Infra|91Infra के बारे में/ })
         }).filter({
@@ -16,21 +14,17 @@ export class Footer {
         }).last();
     }
 
-    /**
-     * Get the footer container
-     */
+
     public getFooterContainer(): Locator {
         return this.footerContainer;
     }
 
-    /**
-     * Verify footer logo section
-     */
+
     async verifyLogoSection(expectedData?: { logoAlt?: string; logoTitle?: string; descriptionText?: string }) {
         const logoImg = this.getFooterContainer().locator('img[alt="91Infra"], img[src*="logo"]').first();
         await assertVisible(logoImg, 'footer logo image');
 
-        // Verify attributes
+
         if (expectedData?.logoAlt) {
             await assertHaveAttribute(logoImg, 'alt', expectedData.logoAlt, 'footer logo alt text');
         }
@@ -38,7 +32,7 @@ export class Footer {
             await assertHaveAttribute(logoImg, 'title', expectedData.logoTitle, 'footer logo title');
         }
 
-        // Verify description text
+
         if (expectedData?.descriptionText) {
             const descElement = this.getFooterContainer().locator('p').filter({ hasText: expectedData.descriptionText.substring(0, 20) }).first();
             await assertVisible(descElement, 'footer description');
@@ -46,9 +40,7 @@ export class Footer {
         }
     }
 
-    /**
-     * Verify footer section headers
-     */
+
     async verifySectionHeader(sectionIndex: number, expectedTitle: string) {
         const sectionHeader = this.getFooterContainer().locator('h3').nth(sectionIndex);
 
