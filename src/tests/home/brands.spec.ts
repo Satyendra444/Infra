@@ -4,7 +4,9 @@ import { LOCALES } from '../../utils/testData';
 
 const DEFAULT_BASE = process.env.BASE_URL || 'https://www.91infra.com/';
 
-LOCALES.forEach(({ path, name, brands }) => {
+LOCALES.forEach((locale) => {
+  const { path, name, home } = locale;
+  const brands = home?.brands;
   // Only add detailed brand tests for Base and English (per request)
   if (!brands || !(name === 'Base' || name === 'English')) return;
 
@@ -67,7 +69,7 @@ LOCALES.forEach(({ path, name, brands }) => {
 
     test('brands list is scrollable and has multiple items', async () => {
       // Wait for anchors to appear (handles lazy rendering differences between locales)
-      await homePage.page.waitForSelector('#brands ul li a', { timeout: 5000 }).catch(() => {});
+      await homePage.page.waitForSelector('#brands ul li a', { timeout: 5000 }).catch(() => { });
       const anchors = await homePage.page.locator('#brands ul li a').count();
       expect(anchors).toBeGreaterThanOrEqual(brands.slugs.length);
 

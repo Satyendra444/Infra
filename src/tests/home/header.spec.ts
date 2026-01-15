@@ -4,7 +4,8 @@ import { LOCALES } from '../../utils/testData';
 
 const BASE_URL = process.env.BASE_URL || 'https://www.91infra.com/';
 
-LOCALES.forEach(({ path, name, header: headerData }) => {
+LOCALES.forEach(({ path, name, common }) => {
+    const { header: headerData } = common;
     test.describe(`91infra Header Tests - ${name} (${path || 'Default'})`, () => {
         let header: Header;
         const cleanBaseUrl = BASE_URL.endsWith('/') ? BASE_URL.slice(0, -1) : BASE_URL;

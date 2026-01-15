@@ -5,44 +5,48 @@ import { assertMeta, assertLink, assertHreflang } from '../../utils/assertions';
 const BASE_URL = process.env.BASE_URL || 'https://www.91infra.com/';
 
 LOCALES.forEach((locale) => {
-    test.describe(`Home Page SEO Tests - ${locale.name} (${locale.path || 'Default'})`, () => {
+    const { path, name, home } = locale;
+    if (!home) return;
+    const { seo } = home;
+
+    test.describe(`Home Page SEO Tests - ${name} (${path || 'Default'})`, () => {
         const cleanBaseUrl = BASE_URL.endsWith('/') ? BASE_URL.slice(0, -1) : BASE_URL;
-        const fullUrl = locale.path ? `${cleanBaseUrl}/${locale.path}` : BASE_URL;
+        const fullUrl = path ? `${cleanBaseUrl}/${path}` : BASE_URL;
 
         test.beforeEach(async ({ page }) => {
             await page.goto(fullUrl);
         });
 
         test('should have correct Title and Description', async ({ page }) => {
-            await expect(page).toHaveTitle(locale.seo.title);
-            await assertMeta(page, 'description', locale.seo.description);
+            await expect(page).toHaveTitle(seo.title);
+            await assertMeta(page, 'description', seo.description);
         });
 
         test('should have correct Open Graph tags', async ({ page }) => {
-            await assertMeta(page, 'og:title', locale.seo.ogTitle);
-            await assertMeta(page, 'og:description', locale.seo.ogDescription);
-            await assertMeta(page, 'og:image', locale.seo.ogImage);
-            await assertMeta(page, 'og:url', locale.seo.ogUrl);
-            await assertMeta(page, 'og:type', locale.seo.ogType);
+            await assertMeta(page, 'og:title', seo.ogTitle);
+            await assertMeta(page, 'og:description', seo.ogDescription);
+            await assertMeta(page, 'og:image', seo.ogImage);
+            await assertMeta(page, 'og:url', seo.ogUrl);
+            await assertMeta(page, 'og:type', seo.ogType);
         });
 
         test('should have correct Twitter Card tags', async ({ page }) => {
-            await assertMeta(page, 'twitter:title', locale.seo.twitterTitle);
-            await assertMeta(page, 'twitter:description', locale.seo.twitterDescription);
-            await assertMeta(page, 'twitter:image', locale.seo.twitterImage);
-            await assertMeta(page, 'twitter:card', locale.seo.twitterCard);
+            await assertMeta(page, 'twitter:title', seo.twitterTitle);
+            await assertMeta(page, 'twitter:description', seo.twitterDescription);
+            await assertMeta(page, 'twitter:image', seo.twitterImage);
+            await assertMeta(page, 'twitter:card', seo.twitterCard);
         });
 
         test('should have correct Robots tag', async ({ page }) => {
-            await assertMeta(page, 'robots', locale.seo.robots);
+            await assertMeta(page, 'robots', seo.robots);
         });
 
         test('should have correct Canonical link', async ({ page }) => {
-            await assertLink(page, 'canonical', locale.seo.canonical);
+            await assertLink(page, 'canonical', seo.canonical);
         });
 
         test('should have correct Hreflang links', async ({ page }) => {
-            for (const { lang, href } of locale.seo.hreflangs) {
+            for (const { lang, href } of seo.hreflangs) {
                 await assertHreflang(page, lang, href);
             }
         });

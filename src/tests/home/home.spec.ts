@@ -6,7 +6,11 @@ import { LOCALES } from '../../utils/testData';
 
 const BASE_URL = process.env.BASE_URL || 'https://www.91infra.com/';
 
-LOCALES.forEach(({ path, name, expectedTitle, expectedDesc, masthead: mastheadData, popularEquipment: popularEquipmentData, brands: brandsData }) => {
+LOCALES.forEach((locale) => {
+    const { path, name, home } = locale;
+    if (!home) return;
+    const { seo, masthead: mastheadData, popularEquipment: popularEquipmentData, brands: brandsData } = home;
+    const { title: expectedTitle, description: expectedDesc } = seo;
     test.describe(`91infra Home Page Tests - ${name} (${path || 'Default'})`, () => {
         let homePage: HomePage;
         let masthead: Masthead;

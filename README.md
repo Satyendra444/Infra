@@ -88,13 +88,12 @@ Source files:
 
 - `src/fixtures/` — (optional) Playwright fixtures if present to provide shared setup/teardown or injected data.
 
-- `src/utils/testData.ts` — Test data and locale definitions (parametrizes tests across `Base` (default), `English` (en), and `Hindi` (hi) locales). Contains test data for:
-  - Header (logo, search placeholder, language, navigation items by locale).
-  - Masthead (card title, category/brand placeholders).
-  - Popular Equipment (section title, tab button, footer link, sample cards with prices and hrefs).
-  - Latest News (section title, tab button, footer link, sample articles with href, title, excerpt, author, date, read time).
-  - Compare Popular (section title, comparison items with left/right products and CTAs).
-  - Brands (section heading, brand slugs for brand page tests).
+- `src/utils/testData.ts` — Lightweight aggregator for test data. It imports localized data from the `testData/` directory and exports the `LOCALES` array used to parameterize tests.
+
+- `src/utils/testData/` — **Modular Test Data Architecture**:
+  - `types.ts` — Centralized TypeScript interfaces for Header, Footer, SEO, and Page-specific data.
+  - `common.ts` — Shared components (Header, Footer) for all locales.
+  - `home.ts` — Home-page specific content (Masthead, Sections, Page-specific SEO).
 
 - `src/utils/assertions.ts` — Centralized assertion helpers used across page objects and tests. These helpers:
   - Provide clearer, consistent error messages in the format: `[AssertionError] <context> | Expected: <expected> | Actual: <actual>`
@@ -194,8 +193,23 @@ npx playwright show-trace trace.zip
 
 ---
 
-If you'd like, I can also:
-- Add an example failing test that demonstrates the reporter's output, or
-- Add a small guide on how to reproduce a failure and capture traces.
-
-Let me know which one you prefer and I will add it. ✨
+## 🚀 Future Plans & Roadmap
+ 
+ To achieve "Pro QA" status, the following improvements are planned:
+ 
+ 1.  **Expand Page Coverage**: Implement basic "Page Load" and SEO tests for:
+     -   Brand Listing Pages
+     -   Model Detail Pages
+     -   Price/Category Pages
+ 2.  **Visual Regression Testing**: Integrate Playwright Snapshot testing (`expect(page).toHaveScreenshot()`) for critical UI components like the Header, Footer, and Masthead to catch CSS regressions.
+ 3.  **Mobile Coverage**: Enable and configure mobile viewport projects in `playwright.config.ts` to ensure responsiveness across iOS/Android devices.
+ 4.  **CI/CD Integration**: Add a GitHub Actions workflow (`.github/workflows/playwright.yml`) to automatically run the test suite on every Push and Pull Request.
+ 5.  **Schema Validation Helper**: Abstract the LD+JSON validation into a reusable utility to ensure consistent metadata standards across all pages.
+ 
+ ---
+ 
+ If you'd like, I can also:
+ - Add an example failing test that demonstrates the reporter's output, or
+ - Add a small guide on how to reproduce a failure and capture traces.
+ 
+ Let me know which one you prefer and I will add it. ✨

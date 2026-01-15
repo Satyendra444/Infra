@@ -4,7 +4,8 @@ import { LOCALES } from '../../utils/testData';
 
 const BASE_URL = process.env.BASE_URL || 'https://www.91infra.com/';
 
-LOCALES.forEach(({ path, name, footer: footerData }) => {
+LOCALES.forEach(({ path, name, common }) => {
+    const { footer: footerData } = common;
     test.describe(`91infra Footer Tests - ${name} (${path || 'Default'})`, () => {
         let footer: Footer;
         const cleanBaseUrl = BASE_URL.endsWith('/') ? BASE_URL.slice(0, -1) : BASE_URL;
@@ -51,13 +52,11 @@ LOCALES.forEach(({ path, name, footer: footerData }) => {
 
 
         test('should verify "About Us" link in footer', async () => {
-            if (footerData?.sections?.about?.links) {
-                const aboutUsLink = footerData.sections.about.links.find(link =>
-                    link.text.toLowerCase().includes('about')
-                );
-                if (aboutUsLink) {
-                    expect(aboutUsLink.href).toBeTruthy();
-                }
+            const aboutUsLink = footerData.sections.about.links.find(link =>
+                link.text?.toLowerCase().includes('about')
+            );
+            if (aboutUsLink) {
+                expect(aboutUsLink.href).toBeTruthy();
             }
         });
 
@@ -157,7 +156,7 @@ LOCALES.forEach(({ path, name, footer: footerData }) => {
         test('should verify "News" link in footer', async () => {
             if (footerData?.sections?.usefulLinks?.links) {
                 const newsLink = footerData.sections.usefulLinks.links.find(link =>
-                    link.text.toLowerCase().includes('news') || link.text.toLowerCase().includes('समाचार')
+                    link.text?.toLowerCase().includes('news') || link.text?.toLowerCase().includes('समाचार')
                 );
                 if (newsLink) {
                     expect(newsLink.href).toBeTruthy();

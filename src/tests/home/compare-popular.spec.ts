@@ -4,7 +4,8 @@ import { LOCALES } from '../../utils/testData';
 
 const BASE_URL = process.env.BASE_URL || 'https://www.91infra.com/';
 
-LOCALES.forEach(({ path, name, comparePopular }) => {
+LOCALES.forEach(({ path, name, home }) => {
+    const comparePopular = home?.comparePopular;
     test.describe(`Compare Popular Section - ${name} (${path || 'Default'})`, () => {
         let homePage: HomePage;
         const cleanBaseUrl = BASE_URL.endsWith('/') ? BASE_URL.slice(0, -1) : BASE_URL;

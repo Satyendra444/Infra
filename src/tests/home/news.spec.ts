@@ -4,7 +4,8 @@ import { LOCALES } from '../../utils/testData';
 
 const BASE_URL = process.env.BASE_URL || 'https://www.91infra.com/';
 
-LOCALES.filter(l => ['Base', 'English', 'Hindi'].includes(l.name)).forEach(({ path, name, latestNews }) => {
+LOCALES.filter(l => ['Base', 'English', 'Hindi'].includes(l.name)).forEach(({ path, name, home }) => {
+    const latestNews = home?.latestNews;
     test.describe(`Latest News - ${name} (${path || 'Default'})`, () => {
         let news: NewsSection;
         const cleanBaseUrl = BASE_URL.endsWith('/') ? BASE_URL.slice(0, -1) : BASE_URL;
