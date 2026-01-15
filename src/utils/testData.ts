@@ -120,6 +120,37 @@ export const LOCALES = [
         brands: {
             heading: 'Search Construction Equipment By Brands',
             slugs: ['jcb', 'cat', 'ace', 'bobcat', 'bull', 'case', 'escorts']
+        },
+        footer: {
+            logoAlt: '91Infra',
+            logoTitle: '91Infra',
+            descriptionText: '91Infra is a rapidly growing digital platform that provides the latest updates and detailed information about the infrastructure and construction equipment industry.',
+            sections: {
+                about: {
+                    title: 'About 91Infra',
+                    links: [
+                        { text: 'About Us', href: '/about' },
+                        { text: 'Contact Us', href: '/contact' },
+                        { text: 'Privacy Policy', href: '/privacy-policy' },
+                        { text: 'Terms & Conditions', href: '/terms' }
+                    ]
+                },
+                workWithUs: {
+                    title: 'Work With Us',
+                    links: [
+                        { text: 'Advertise With Us', href: '/advertise' },
+                        { text: 'Feedback', href: '/feedback' },
+                        { text: 'Career', href: '/careers' }
+                    ]
+                },
+                usefulLinks: {
+                    title: 'Useful Links',
+                    links: [
+                        { text: 'Construction Equipments', href: '/construction-equipments' },
+                        { text: 'News', href: '/news/category/construction-equipments' }
+                    ]
+                }
+            }
         }
     },
     {
@@ -242,6 +273,37 @@ export const LOCALES = [
         brands: {
             heading: 'Search Construction Equipment By Brands',
             slugs: ['jcb', 'cat', 'ace', 'bobcat', 'bull', 'case', 'escorts']
+        },
+        footer: {
+            logoAlt: '91Infra',
+            logoTitle: '91Infra',
+            descriptionText: '91Infra is a rapidly growing digital platform that provides the latest updates and detailed information about the infrastructure and construction equipment industry.',
+            sections: {
+                about: {
+                    title: 'About 91Infra',
+                    links: [
+                        { text: 'About Us', href: '/en/about' },
+                        { text: 'Contact Us', href: '/en/contact' },
+                        { text: 'Privacy Policy', href: '/en/privacy-policy' },
+                        { text: 'Terms & Conditions', href: '/en/terms' }
+                    ]
+                },
+                workWithUs: {
+                    title: 'Work With Us',
+                    links: [
+                        { text: 'Advertise With Us', href: '/en/advertise' },
+                        { text: 'Feedback', href: '/en/feedback' },
+                        { text: 'Career', href: '/en/careers' }
+                    ]
+                },
+                usefulLinks: {
+                    title: 'Useful Links',
+                    links: [
+                        { text: 'Construction Equipments', href: '/en/construction-equipments' },
+                        { text: 'News', href: '/en/news/category/construction-equipments' }
+                    ]
+                }
+            }
         }
     },
     {
@@ -364,7 +426,37 @@ export const LOCALES = [
         brands: {
             heading: 'ब्रांड के आधार पर निर्माण उपकरण खोजें',
             slugs: ['jcb', 'cat', 'ace', 'bobcat', 'bull', 'case', 'escorts']
+        },
+        footer: {
+            logoAlt: '91Infra',
+            logoTitle: '91Infra',
+            descriptionText: '91इंफ्रा एक तेजी से बढ़ता डिजिटल प्लेटफॉर्म है जो इंफ्रास्ट्रक्चर और निर्माण उपकरण उद्योग से संबंधित नवीनतम अपडेट और विस्तृत जानकारी प्रदान करता है।',
+            sections: {
+                about: {
+                    title: '91Infra के बारे में',
+                    links: [
+                        { text: 'हमारे बारे में', href: '/hi/about' },
+                        { text: 'संपर्क करें', href: '/hi/contact' },
+                        { text: 'गोपनीयता नीति', href: '/hi/privacy-policy' },
+                        { text: 'नियम और शर्तें', href: '/hi/terms' }
+                    ]
+                },
+                workWithUs: {
+                    title: 'हमारे साथ काम करें',
+                    links: [
+                        { text: 'हमारे साथ विज्ञापन करें', href: '/hi/advertise' },
+                        { text: 'प्रतिक्रिया', href: '/hi/feedback' },
+                        { text: 'कैरियर', href: '/hi/careers' }
+                    ]
+                },
+                usefulLinks: {
+                    title: 'उपयोगी लिंक',
+                    links: [
+                        { text: 'निर्माण उपकरण', href: '/hi/construction-equipments' },
+                        { text: 'समाचार', href: '/hi/news/category/construction-equipments' }
+                    ]
+                }
+            }
         }
     }
 ];
-
