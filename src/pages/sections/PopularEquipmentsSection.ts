@@ -1,6 +1,6 @@
 import { Page, expect, Locator } from '@playwright/test';
 
-export class PopularEquipment {
+export class PopularEquipmentsSection {
     readonly page: Page;
 
     constructor(page: Page) {

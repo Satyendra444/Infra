@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
-import { HomePage } from '../pages/HomePage';
-import { LOCALES } from '../utils/testData';
+import { HomePage } from '../../pages/home/HomePage';
+import { LOCALES } from '../../utils/testData';
 
 const DEFAULT_BASE = process.env.BASE_URL || 'https://www.91infra.com/';
 
