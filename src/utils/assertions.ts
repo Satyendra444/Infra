@@ -25,21 +25,21 @@ export async function assertEditable(locator: Locator, context = 'element to be 
     }
 }
 
-export async function assertHaveAttribute(locator: Locator, attr: string, expected: string, context?: string) {
+export async function assertHaveAttribute(locator: Locator, attr: string, expected: string | RegExp, context?: string) {
     try {
         await expect(locator).toHaveAttribute(attr, expected);
     } catch (err: any) {
         const actual = (await locator.getAttribute(attr)) ?? 'missing';
-        throw new Error(buildMessage(context ?? `attribute ${attr}`, expected, actual));
+        throw new Error(buildMessage(context ?? `attribute ${attr}`, String(expected), actual));
     }
 }
 
-export async function assertContainText(locator: Locator, expected: string, context = 'element to contain text') {
+export async function assertContainText(locator: Locator, expected: string | RegExp, context = 'element to contain text') {
     try {
         await expect(locator).toContainText(expected);
     } catch (err: any) {
         const actual = await locator.innerText().catch(() => 'missing');
-        throw new Error(buildMessage(context, expected, actual));
+        throw new Error(buildMessage(context, String(expected), actual));
     }
 }
 

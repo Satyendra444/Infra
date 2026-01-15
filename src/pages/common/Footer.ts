@@ -60,24 +60,14 @@ export class Footer {
      * Verify "About 91Infra" section links
      */
     async verifyAboutSection(expectedLinks?: Array<{ text: string; href: string }>) {
-        const sections = this.getFooterContainer().locator('div').filter({ has: this.page.locator('h3') });
-        let aboutSection: Locator | null = null;
+        const h3 = this.getFooterContainer().locator('h3').filter({ hasText: /About|बारे/ }).first();
 
-        const count = await sections.count();
-        for (let i = 0; i < count; i++) {
-            const header = sections.nth(i).locator('h3');
-            const text = await header.innerText();
-            if (text.includes('About') || text.includes('बारे')) {
-                aboutSection = sections.nth(i);
-                break;
-            }
+        if (!await h3.isVisible()) {
+            throw new Error('[AssertionError] About section header not found');
         }
 
-        if (!aboutSection) {
-            throw new Error('[AssertionError] About section not found');
-        }
-
-        await assertVisible(aboutSection, 'about section');
+        const aboutSection = h3.locator('xpath=..');
+        await assertVisible(aboutSection, 'about section container');
 
         if (expectedLinks && expectedLinks.length > 0) {
             for (const link of expectedLinks) {
@@ -96,24 +86,14 @@ export class Footer {
      * Verify "Work With Us" section links
      */
     async verifyWorkWithUsSection(expectedLinks?: Array<{ text: string; href: string }>) {
-        const sections = this.getFooterContainer().locator('div').filter({ has: this.page.locator('h3') });
-        let workSection: Locator | null = null;
+        const h3 = this.getFooterContainer().locator('h3').filter({ hasText: /Work|काम/ }).first();
 
-        const count = await sections.count();
-        for (let i = 0; i < count; i++) {
-            const header = sections.nth(i).locator('h3');
-            const text = await header.innerText();
-            if (text.includes('Work') || text.includes('काम')) {
-                workSection = sections.nth(i);
-                break;
-            }
+        if (!await h3.isVisible()) {
+            throw new Error('[AssertionError] Work With Us section header not found');
         }
 
-        if (!workSection) {
-            throw new Error('[AssertionError] Work With Us section not found');
-        }
-
-        await assertVisible(workSection, 'work with us section');
+        const workSection = h3.locator('xpath=..');
+        await assertVisible(workSection, 'work with us section container');
 
         if (expectedLinks && expectedLinks.length > 0) {
             for (const link of expectedLinks) {
@@ -132,24 +112,14 @@ export class Footer {
      * Verify "Useful Links" section links
      */
     async verifyUsefulLinksSection(expectedLinks?: Array<{ text: string; href: string }>) {
-        const sections = this.getFooterContainer().locator('div').filter({ has: this.page.locator('h3') });
-        let usefulSection: Locator | null = null;
+        const h3 = this.getFooterContainer().locator('h3').filter({ hasText: /Useful|उपयोगी/ }).first();
 
-        const count = await sections.count();
-        for (let i = 0; i < count; i++) {
-            const header = sections.nth(i).locator('h3');
-            const text = await header.innerText();
-            if (text.includes('Useful') || text.includes('उपयोगी')) {
-                usefulSection = sections.nth(i);
-                break;
-            }
+        if (!await h3.isVisible()) {
+            throw new Error('[AssertionError] Useful Links section header not found');
         }
 
-        if (!usefulSection) {
-            throw new Error('[AssertionError] Useful Links section not found');
-        }
-
-        await assertVisible(usefulSection, 'useful links section');
+        const usefulSection = h3.locator('xpath=..');
+        await assertVisible(usefulSection, 'useful links section container');
 
         if (expectedLinks && expectedLinks.length > 0) {
             for (const link of expectedLinks) {
@@ -171,12 +141,12 @@ export class Footer {
         const footer = this.getFooterContainer();
         await assertVisible(footer, 'footer container');
 
-        // The footer has multiple sections including the logo/desc, about, work, useful, partner, etc.
-        const sections = footer.locator('> div');
-        const sectionCount = await sections.count();
+        // Check if we have at least 3 h3 headers (About, Work, Useful)
+        const h3s = footer.locator('h3');
+        const count = await h3s.count();
 
-        if (sectionCount < 2) { // Minimum requirement for the main sections to be present
-            throw new Error(`[AssertionError] footer structure mismatch | Expected at least 2 top-level sections | Found: ${sectionCount}`);
+        if (count < 3) {
+            throw new Error(`[AssertionError] footer structure mismatch | Expected at least 3 headers | Found: ${count}`);
         }
     }
 
@@ -184,8 +154,8 @@ export class Footer {
      * Verify responsive grid layout
      */
     async verifyResponsiveLayout() {
-        // Since we don't have a footer tag, we look for a container with grid or flex layout
-        const footerGrid = this.getFooterContainer();
+        // Look for a grid or flex container that houses the sections
+        const footerGrid = this.getFooterContainer().locator('div').filter({ has: this.page.locator('h3') }).first();
         const classes = await footerGrid.getAttribute('class');
 
         if (!classes || (!classes.includes('grid') && !classes.includes('flex'))) {
@@ -208,6 +178,61 @@ export class Footer {
     async getDescriptionText(): Promise<string> {
         const desc = this.getFooterContainer().locator('p').filter({ hasText: /91Infra is a rapidly growing|91इंफ्रा एक तेजी से बढ़ता/ }).first();
         return await desc.innerText();
+    }
+
+    /**
+     * Verify "Our Partner Website" section
+     */
+    /**
+     * Verify "Our Partner Website" section
+     */
+    async verifyPartnerSection(expectedPartners?: Array<{ alt: string; logoSrc: string }>) {
+        const container = this.getFooterContainer();
+        const h3 = container.locator('h3').filter({ hasText: /Partner|साझेदार/i }).first();
+
+        await assertVisible(h3, 'partner section header');
+
+        if (expectedPartners && expectedPartners.length > 0) {
+            for (const partner of expectedPartners) {
+                // Find logo by alt text containing the brand name
+                const brandName = partner.alt.split('.')[0];
+                const logo = container.locator(`img[alt*="${brandName}" i]`).first();
+                await assertVisible(logo, `partner logo: ${partner.alt}`);
+                await assertHaveAttribute(logo, 'src', new RegExp(partner.logoSrc), `partner logo src: ${partner.alt}`);
+            }
+        }
+    }
+
+    /**
+     * Verify "Get Connected" social section
+     */
+    async verifySocialSection(expectedSocial?: { title: string; icons: string[] }) {
+        const container = this.getFooterContainer();
+        const h3 = container.locator('h3').filter({ hasText: /Connected|जुड़ें/i }).first();
+
+        await assertVisible(h3, 'social section header');
+
+        if (expectedSocial?.title) {
+            await assertContainText(h3, expectedSocial.title, 'social section title');
+        }
+
+        if (expectedSocial?.icons) {
+            for (const icon of expectedSocial.icons) {
+                // Find the SVG that contains the specific icon path
+                // We use a broader CSS selector that handles potential namespacing
+                const svgIcon = container.locator('svg').filter({
+                    has: this.page.locator(`use[href*="${icon}"], use[*|href*="${icon}"]`)
+                }).first();
+
+                await assertVisible(svgIcon, `social icon: ${icon}`);
+
+                // Also check if the 'use' tag itself is visible (some browsers/playwright versions)
+                const useTag = svgIcon.locator('use').first();
+                if (await useTag.count() > 0) {
+                    await assertVisible(useTag, `social icon link: ${icon}`);
+                }
+            }
+        }
     }
 
     /**

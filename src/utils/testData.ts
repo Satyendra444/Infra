@@ -149,6 +149,17 @@ export const LOCALES = [
                         { text: 'Construction Equipments', href: '/construction-equipments' },
                         { text: 'News', href: '/news/category/construction-equipments' }
                     ]
+                },
+                partners: {
+                    title: 'Our Partner Website',
+                    links: [
+                        { alt: '91trucks.com', logoSrc: '91trucks-logo.png' },
+                        { alt: '91tractors.com', logoSrc: '91tractors-logo.webp' }
+                    ]
+                },
+                social: {
+                    title: 'Get Connected',
+                    icons: ['facebook', 'insta', 'linkedin', 'youtube']
                 }
             }
         }
@@ -302,6 +313,17 @@ export const LOCALES = [
                         { text: 'Construction Equipments', href: '/en/construction-equipments' },
                         { text: 'News', href: '/en/news/category/construction-equipments' }
                     ]
+                },
+                partners: {
+                    title: 'Our Partner Website',
+                    links: [
+                        { alt: '91trucks.com', logoSrc: '91trucks-logo.png' },
+                        { alt: '91tractors.com', logoSrc: '91tractors-logo.webp' }
+                    ]
+                },
+                social: {
+                    title: 'Get Connected',
+                    icons: ['facebook', 'insta', 'linkedin', 'youtube']
                 }
             }
         }
@@ -455,6 +477,17 @@ export const LOCALES = [
                         { text: 'निर्माण उपकरण', href: '/hi/construction-equipments' },
                         { text: 'समाचार', href: '/hi/news/category/construction-equipments' }
                     ]
+                },
+                partners: {
+                    title: 'हमारी साझेदार वेबसाइट',
+                    links: [
+                        { alt: '91trucks.com', logoSrc: '91trucks-logo.png' },
+                        { alt: '91tractors.com', logoSrc: '91tractors-logo.webp' }
+                    ]
+                },
+                social: {
+                    title: 'हम से जुड़ें',
+                    icons: ['facebook', 'insta', 'linkedin', 'youtube']
                 }
             }
         }

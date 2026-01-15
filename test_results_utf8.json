@@ -1,0 +1,2961 @@
+﻿{
+  "config": {
+    "configFile": "C:\\Users\\Inno\\Desktop\\Infra\\playwright.config.ts",
+    "rootDir": "C:/Users/Inno/Desktop/Infra/src/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "json"
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/Inno/Desktop/Infra/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/Inno/Desktop/Infra/src/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/Inno/Desktop/Infra/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "firefox",
+        "name": "firefox",
+        "testDir": "C:/Users/Inno/Desktop/Infra/src/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "C:/Users/Inno/Desktop/Infra/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "webkit",
+        "name": "webkit",
+        "testDir": "C:/Users/Inno/Desktop/Infra/src/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.57.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "home\\footer.spec.ts",
+      "file": "home/footer.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "91infra Footer Tests - Base (Default)",
+          "file": "home/footer.spec.ts",
+          "line": 8,
+          "column": 10,
+          "specs": [
+            {
+              "title": "should display Footer container and structure",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1539,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:07.290Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-9b91494cebb63f32aac8",
+              "file": "home/footer.spec.ts",
+              "line": 20,
+              "column": 13
+            },
+            {
+              "title": "should display responsive grid layout",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1277,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:07.262Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-61d60c6d57d084b235f6",
+              "file": "home/footer.spec.ts",
+              "line": 24,
+              "column": 13
+            },
+            {
+              "title": "should display logo section with correct image",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1495,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:07.280Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-b3426bff0fa3941fa5fe",
+              "file": "home/footer.spec.ts",
+              "line": 28,
+              "column": 13
+            },
+            {
+              "title": "should display footer description text correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1402,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:07.322Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-3aa0fd909e65e550b8c8",
+              "file": "home/footer.spec.ts",
+              "line": 37,
+              "column": 13
+            },
+            {
+              "title": "should display \"About 91Infra\" section with correct title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1578,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:08.661Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-9f01bbf077d9563e82ae",
+              "file": "home/footer.spec.ts",
+              "line": 45,
+              "column": 13
+            },
+            {
+              "title": "should verify \"About Us\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1160,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:08.909Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-91c8dc18694fb9782d35",
+              "file": "home/footer.spec.ts",
+              "line": 53,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Contact Us\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1304,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:08.974Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-2e4d826c4cf53bd1915a",
+              "file": "home/footer.spec.ts",
+              "line": 64,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Privacy Policy\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1160,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:08.975Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-de443083ed616bb6c907",
+              "file": "home/footer.spec.ts",
+              "line": 75,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Terms & Conditions\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1103,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:10.095Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-c9ece1583088e335c893",
+              "file": "home/footer.spec.ts",
+              "line": 86,
+              "column": 13
+            },
+            {
+              "title": "should display \"Work With Us\" section with correct title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1100,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:10.164Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-32b2f92712f38cb9b58a",
+              "file": "home/footer.spec.ts",
+              "line": 97,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Advertise With Us\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1126,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:10.267Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-2f319cd03e025cb6a9b2",
+              "file": "home/footer.spec.ts",
+              "line": 105,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Feedback\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 721,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:10.302Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-348d119383c4768377e1",
+              "file": "home/footer.spec.ts",
+              "line": 116,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Career\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1366,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:11.053Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-d5150f68e22576a35271",
+              "file": "home/footer.spec.ts",
+              "line": 127,
+              "column": 13
+            },
+            {
+              "title": "should display \"Useful Links\" section with correct title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1738,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:11.231Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-f4bef8c7aef7f9e62633",
+              "file": "home/footer.spec.ts",
+              "line": 138,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Construction Equipments\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1366,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:11.291Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-1165b42887becfde51a2",
+              "file": "home/footer.spec.ts",
+              "line": 146,
+              "column": 13
+            },
+            {
+              "title": "should verify \"News\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 758,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:11.412Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-7472869d825757f07926",
+              "file": "home/footer.spec.ts",
+              "line": 157,
+              "column": 13
+            },
+            {
+              "title": "should display \"Our Partner Website\" section with logos",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 668,
+                      "error": {
+                        "message": "Error: [AssertionError] Partner section not found",
+                        "stack": "Error: [AssertionError] Partner section not found\n    at Footer.verifyPartnerSection (C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts:231:19)\n    at C:\\Users\\Inno\\Desktop\\Infra\\src\\tests\\home\\footer.spec.ts:170:17",
+                        "location": {
+                          "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                          "column": 19,
+                          "line": 231
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\common\\Footer.ts:231\n\n\u001b[0m \u001b[90m 229 |\u001b[39m\n \u001b[90m 230 |\u001b[39m         \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mpartnerSection) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 231 |\u001b[39m             \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'[AssertionError] Partner section not found'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 232 |\u001b[39m         }\n \u001b[90m 233 |\u001b[39m\n \u001b[90m 234 |\u001b[39m         \u001b[36mawait\u001b[39m assertVisible(partnerSection\u001b[33m,\u001b[39m \u001b[32m'partner section'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                            "column": 19,
+                            "line": 231
+                          },
+                          "message": "Error: [AssertionError] Partner section not found\n\n   at ..\\pages\\common\\Footer.ts:231\n\n  229 |\n  230 |         if (!partnerSection) {\n> 231 |             throw new Error('[AssertionError] Partner section not found');\n      |                   ^\n  232 |         }\n  233 |\n  234 |         await assertVisible(partnerSection, 'partner section');\n    at Footer.verifyPartnerSection (C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts:231:19)\n    at C:\\Users\\Inno\\Desktop\\Infra\\src\\tests\\home\\footer.spec.ts:170:17"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:12.184Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\Inno\\Desktop\\Infra\\test-results\\home-footer-91infra-Footer-99dbc--Website-section-with-logos-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                        "column": 19,
+                        "line": 231
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-17df7c0378acbf669d1e",
+              "file": "home/footer.spec.ts",
+              "line": 168,
+              "column": 13
+            },
+            {
+              "title": "should display \"Get Connected\" social section",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 1371,
+                      "error": {
+                        "message": "Error: locator.innerText: Error: strict mode violation: locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3') resolved to 3 elements:\n    1) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">About 91Infra</h3> aka getByRole('heading', { name: 'About 91Infra' })\n    2) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Work With Us</h3> aka getByRole('heading', { name: 'Work With Us' })\n    3) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Useful Links</h3> aka getByRole('heading', { name: 'Useful Links' })\n\nCall log:\n\u001b[2m  - waiting for locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3')\u001b[22m\n",
+                        "stack": "Error: locator.innerText: Error: strict mode violation: locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3') resolved to 3 elements:\n    1) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">About 91Infra</h3> aka getByRole('heading', { name: 'About 91Infra' })\n    2) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Work With Us</h3> aka getByRole('heading', { name: 'Work With Us' })\n    3) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Useful Links</h3> aka getByRole('heading', { name: 'Useful Links' })\n\nCall log:\n\u001b[2m  - waiting for locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3')\u001b[22m\n\n    at Footer.verifySocialSection (C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts:255:39)\n    at C:\\Users\\Inno\\Desktop\\Infra\\src\\tests\\home\\footer.spec.ts:176:17",
+                        "location": {
+                          "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                          "column": 39,
+                          "line": 255
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\common\\Footer.ts:255\n\n\u001b[0m \u001b[90m 253 |\u001b[39m         \u001b[36mfor\u001b[39m (\u001b[36mlet\u001b[39m i \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m i \u001b[33m<\u001b[39m count\u001b[33m;\u001b[39m i\u001b[33m++\u001b[39m) {\n \u001b[90m 254 |\u001b[39m             \u001b[36mconst\u001b[39m header \u001b[33m=\u001b[39m sections\u001b[33m.\u001b[39mnth(i)\u001b[33m.\u001b[39mlocator(\u001b[32m'h3'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 255 |\u001b[39m             \u001b[36mconst\u001b[39m text \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m header\u001b[33m.\u001b[39minnerText()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 256 |\u001b[39m             \u001b[36mif\u001b[39m (text\u001b[33m.\u001b[39mincludes(\u001b[32m'Connected'\u001b[39m) \u001b[33m||\u001b[39m text\u001b[33m.\u001b[39mincludes(\u001b[32m'αñ£αÑüαñíαñ╝αÑçαñé'\u001b[39m)) {\n \u001b[90m 257 |\u001b[39m                 socialSection \u001b[33m=\u001b[39m sections\u001b[33m.\u001b[39mnth(i)\u001b[33m;\u001b[39m\n \u001b[90m 258 |\u001b[39m                 \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                            "column": 39,
+                            "line": 255
+                          },
+                          "message": "Error: locator.innerText: Error: strict mode violation: locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3') resolved to 3 elements:\n    1) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">About 91Infra</h3> aka getByRole('heading', { name: 'About 91Infra' })\n    2) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Work With Us</h3> aka getByRole('heading', { name: 'Work With Us' })\n    3) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Useful Links</h3> aka getByRole('heading', { name: 'Useful Links' })\n\nCall log:\n\u001b[2m  - waiting for locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3')\u001b[22m\n\n\n   at ..\\pages\\common\\Footer.ts:255\n\n  253 |         for (let i = 0; i < count; i++) {\n  254 |             const header = sections.nth(i).locator('h3');\n> 255 |             const text = await header.innerText();\n      |                                       ^\n  256 |             if (text.includes('Connected') || text.includes('αñ£αÑüαñíαñ╝αÑçαñé')) {\n  257 |                 socialSection = sections.nth(i);\n  258 |                 break;\n    at Footer.verifySocialSection (C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts:255:39)\n    at C:\\Users\\Inno\\Desktop\\Infra\\src\\tests\\home\\footer.spec.ts:176:17"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:12.438Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\Inno\\Desktop\\Infra\\test-results\\home-footer-91infra-Footer-1edac-et-Connected-social-section-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                        "column": 39,
+                        "line": 255
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-614034bf7efbd527d11a",
+              "file": "home/footer.spec.ts",
+              "line": 174,
+              "column": 13
+            },
+            {
+              "title": "should have clickable links in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3112,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:12.675Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-1f497bb380b0ad164deb",
+              "file": "home/footer.spec.ts",
+              "line": 183,
+              "column": 13
+            },
+            {
+              "title": "should verify footer position at bottom of page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1301,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:12.991Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-d4a9e2bac9ababa05aee",
+              "file": "home/footer.spec.ts",
+              "line": 199,
+              "column": 13
+            },
+            {
+              "title": "should display footer description text",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1076,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:15.772Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-f5d8f3f1b8ec8f0a01ae",
+              "file": "home/footer.spec.ts",
+              "line": 203,
+              "column": 13
+            },
+            {
+              "title": "should verify footer links do not have broken hrefs",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 803,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:14.316Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-d3e4748c1227595c8181",
+              "file": "home/footer.spec.ts",
+              "line": 213,
+              "column": 13
+            },
+            {
+              "title": "should have footer section titles in correct language",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 815,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:16.461Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-994e5944a19c3fdcf9e3",
+              "file": "home/footer.spec.ts",
+              "line": 230,
+              "column": 13
+            },
+            {
+              "title": "should verify footer links have correct href pattern for locale",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 610,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:15.144Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-8d289c54e19db3887491",
+              "file": "home/footer.spec.ts",
+              "line": 248,
+              "column": 13
+            },
+            {
+              "title": "should display footer with proper styling (grid or flex layout)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1265,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:15.777Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-71c87625ea4605a8674e",
+              "file": "home/footer.spec.ts",
+              "line": 264,
+              "column": 13
+            },
+            {
+              "title": "should have responsive column layout",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1236,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:15.822Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-6172e03c3afedc352412",
+              "file": "home/footer.spec.ts",
+              "line": 276,
+              "column": 13
+            }
+          ]
+        },
+        {
+          "title": "91infra Footer Tests - English (en)",
+          "file": "home/footer.spec.ts",
+          "line": 8,
+          "column": 10,
+          "specs": [
+            {
+              "title": "should display Footer container and structure",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1044,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:17.086Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-b1c76a16e1f7d8171d21",
+              "file": "home/footer.spec.ts",
+              "line": 20,
+              "column": 13
+            },
+            {
+              "title": "should display responsive grid layout",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2067,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:17.091Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-c8230511d7364998999a",
+              "file": "home/footer.spec.ts",
+              "line": 24,
+              "column": 13
+            },
+            {
+              "title": "should display logo section with correct image",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1210,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:17.105Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-a6d8f1f041bbea77e932",
+              "file": "home/footer.spec.ts",
+              "line": 28,
+              "column": 13
+            },
+            {
+              "title": "should display footer description text correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1119,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:18.080Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-ba2086a879f6c35f39d8",
+              "file": "home/footer.spec.ts",
+              "line": 37,
+              "column": 13
+            },
+            {
+              "title": "should display \"About 91Infra\" section with correct title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 981,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:18.163Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-813ce95e02e98cc6071b",
+              "file": "home/footer.spec.ts",
+              "line": 45,
+              "column": 13
+            },
+            {
+              "title": "should verify \"About Us\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1230,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:18.339Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-a86e8ea1e852916f6720",
+              "file": "home/footer.spec.ts",
+              "line": 53,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Contact Us\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1047,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:19.173Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-a417cd61c3e131e4f6a6",
+              "file": "home/footer.spec.ts",
+              "line": 64,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Privacy Policy\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 707,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:19.186Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-ef011f9853c6e630aeeb",
+              "file": "home/footer.spec.ts",
+              "line": 75,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Terms & Conditions\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1174,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:19.294Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-a05199c7b4660ee00a4c",
+              "file": "home/footer.spec.ts",
+              "line": 86,
+              "column": 13
+            },
+            {
+              "title": "should display \"Work With Us\" section with correct title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1297,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:19.589Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-57455acd4b852d6e4860",
+              "file": "home/footer.spec.ts",
+              "line": 97,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Advertise With Us\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1183,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:19.920Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-516ea6420024040dbaab",
+              "file": "home/footer.spec.ts",
+              "line": 105,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Feedback\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 864,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:20.247Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-9d00f1658e6592bd55e1",
+              "file": "home/footer.spec.ts",
+              "line": 116,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Career\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1175,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:20.501Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-4009f91f4798bb329c60",
+              "file": "home/footer.spec.ts",
+              "line": 127,
+              "column": 13
+            },
+            {
+              "title": "should display \"Useful Links\" section with correct title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1034,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:20.909Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-664087a80463db174d95",
+              "file": "home/footer.spec.ts",
+              "line": 138,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Construction Equipments\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 621,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:21.136Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-935feb3ce0c83efe04dd",
+              "file": "home/footer.spec.ts",
+              "line": 146,
+              "column": 13
+            },
+            {
+              "title": "should verify \"News\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 839,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:21.143Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-dc4185bf8e43132a5b85",
+              "file": "home/footer.spec.ts",
+              "line": 157,
+              "column": 13
+            },
+            {
+              "title": "should display \"Our Partner Website\" section with logos",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 1532,
+                      "error": {
+                        "message": "Error: locator.innerText: Error: strict mode violation: locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3') resolved to 3 elements:\n    1) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">About 91Infra</h3> aka getByRole('heading', { name: 'About 91Infra' })\n    2) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Work With Us</h3> aka getByRole('heading', { name: 'Work With Us' })\n    3) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Useful Links</h3> aka getByRole('heading', { name: 'Useful Links' })\n\nCall log:\n\u001b[2m  - waiting for locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3')\u001b[22m\n",
+                        "stack": "Error: locator.innerText: Error: strict mode violation: locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3') resolved to 3 elements:\n    1) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">About 91Infra</h3> aka getByRole('heading', { name: 'About 91Infra' })\n    2) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Work With Us</h3> aka getByRole('heading', { name: 'Work With Us' })\n    3) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Useful Links</h3> aka getByRole('heading', { name: 'Useful Links' })\n\nCall log:\n\u001b[2m  - waiting for locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3')\u001b[22m\n\n    at Footer.verifyPartnerSection (C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts:223:39)\n    at C:\\Users\\Inno\\Desktop\\Infra\\src\\tests\\home\\footer.spec.ts:170:17",
+                        "location": {
+                          "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                          "column": 39,
+                          "line": 223
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\common\\Footer.ts:223\n\n\u001b[0m \u001b[90m 221 |\u001b[39m         \u001b[36mfor\u001b[39m (\u001b[36mlet\u001b[39m i \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m i \u001b[33m<\u001b[39m count\u001b[33m;\u001b[39m i\u001b[33m++\u001b[39m) {\n \u001b[90m 222 |\u001b[39m             \u001b[36mconst\u001b[39m header \u001b[33m=\u001b[39m sections\u001b[33m.\u001b[39mnth(i)\u001b[33m.\u001b[39mlocator(\u001b[32m'h3'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 223 |\u001b[39m             \u001b[36mconst\u001b[39m text \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m header\u001b[33m.\u001b[39minnerText()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 224 |\u001b[39m             \u001b[36mif\u001b[39m (text\u001b[33m.\u001b[39mincludes(\u001b[32m'Partner'\u001b[39m) \u001b[33m||\u001b[39m text\u001b[33m.\u001b[39mincludes(\u001b[32m'αñ╕αñ╛αñ¥αÑçαñªαñ╛αñ░'\u001b[39m)) {\n \u001b[90m 225 |\u001b[39m                 partnerSection \u001b[33m=\u001b[39m sections\u001b[33m.\u001b[39mnth(i)\u001b[33m;\u001b[39m\n \u001b[90m 226 |\u001b[39m                 \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                            "column": 39,
+                            "line": 223
+                          },
+                          "message": "Error: locator.innerText: Error: strict mode violation: locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3') resolved to 3 elements:\n    1) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">About 91Infra</h3> aka getByRole('heading', { name: 'About 91Infra' })\n    2) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Work With Us</h3> aka getByRole('heading', { name: 'Work With Us' })\n    3) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Useful Links</h3> aka getByRole('heading', { name: 'Useful Links' })\n\nCall log:\n\u001b[2m  - waiting for locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3')\u001b[22m\n\n\n   at ..\\pages\\common\\Footer.ts:223\n\n  221 |         for (let i = 0; i < count; i++) {\n  222 |             const header = sections.nth(i).locator('h3');\n> 223 |             const text = await header.innerText();\n      |                                       ^\n  224 |             if (text.includes('Partner') || text.includes('αñ╕αñ╛αñ¥αÑçαñªαñ╛αñ░')) {\n  225 |                 partnerSection = sections.nth(i);\n  226 |                 break;\n    at Footer.verifyPartnerSection (C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts:223:39)\n    at C:\\Users\\Inno\\Desktop\\Infra\\src\\tests\\home\\footer.spec.ts:170:17"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:21.709Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\Inno\\Desktop\\Infra\\test-results\\home-footer-91infra-Footer-56d1c--Website-section-with-logos-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                        "column": 39,
+                        "line": 223
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-797900f67f34c3f2dcac",
+              "file": "home/footer.spec.ts",
+              "line": 168,
+              "column": 13
+            },
+            {
+              "title": "should display \"Get Connected\" social section",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 1582,
+                      "error": {
+                        "message": "Error: locator.innerText: Error: strict mode violation: locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3') resolved to 3 elements:\n    1) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">About 91Infra</h3> aka getByRole('heading', { name: 'About 91Infra' })\n    2) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Work With Us</h3> aka getByRole('heading', { name: 'Work With Us' })\n    3) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Useful Links</h3> aka getByRole('heading', { name: 'Useful Links' })\n\nCall log:\n\u001b[2m  - waiting for locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3')\u001b[22m\n",
+                        "stack": "Error: locator.innerText: Error: strict mode violation: locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3') resolved to 3 elements:\n    1) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">About 91Infra</h3> aka getByRole('heading', { name: 'About 91Infra' })\n    2) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Work With Us</h3> aka getByRole('heading', { name: 'Work With Us' })\n    3) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Useful Links</h3> aka getByRole('heading', { name: 'Useful Links' })\n\nCall log:\n\u001b[2m  - waiting for locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3')\u001b[22m\n\n    at Footer.verifySocialSection (C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts:255:39)\n    at C:\\Users\\Inno\\Desktop\\Infra\\src\\tests\\home\\footer.spec.ts:176:17",
+                        "location": {
+                          "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                          "column": 39,
+                          "line": 255
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\common\\Footer.ts:255\n\n\u001b[0m \u001b[90m 253 |\u001b[39m         \u001b[36mfor\u001b[39m (\u001b[36mlet\u001b[39m i \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m i \u001b[33m<\u001b[39m count\u001b[33m;\u001b[39m i\u001b[33m++\u001b[39m) {\n \u001b[90m 254 |\u001b[39m             \u001b[36mconst\u001b[39m header \u001b[33m=\u001b[39m sections\u001b[33m.\u001b[39mnth(i)\u001b[33m.\u001b[39mlocator(\u001b[32m'h3'\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 255 |\u001b[39m             \u001b[36mconst\u001b[39m text \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m header\u001b[33m.\u001b[39minnerText()\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                       \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 256 |\u001b[39m             \u001b[36mif\u001b[39m (text\u001b[33m.\u001b[39mincludes(\u001b[32m'Connected'\u001b[39m) \u001b[33m||\u001b[39m text\u001b[33m.\u001b[39mincludes(\u001b[32m'αñ£αÑüαñíαñ╝αÑçαñé'\u001b[39m)) {\n \u001b[90m 257 |\u001b[39m                 socialSection \u001b[33m=\u001b[39m sections\u001b[33m.\u001b[39mnth(i)\u001b[33m;\u001b[39m\n \u001b[90m 258 |\u001b[39m                 \u001b[36mbreak\u001b[39m\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                            "column": 39,
+                            "line": 255
+                          },
+                          "message": "Error: locator.innerText: Error: strict mode violation: locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3') resolved to 3 elements:\n    1) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">About 91Infra</h3> aka getByRole('heading', { name: 'About 91Infra' })\n    2) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Work With Us</h3> aka getByRole('heading', { name: 'Work With Us' })\n    3) <h3 class=\"w-full h-6 font-sans text-base font-medium leading-6 text-[#0D131F]\">Useful Links</h3> aka getByRole('heading', { name: 'Useful Links' })\n\nCall log:\n\u001b[2m  - waiting for locator('div, section').filter({ has: locator('h3').filter({ hasText: /About 91Infra|91Infra αñòαÑç αñ¼αñ╛αñ░αÑç αñ«αÑçαñé/ }) }).filter({ hasText: /┬⌐ 20\\d\\d|All rights reserved/ }).last().locator('div').filter({ has: locator('h3') }).first().locator('h3')\u001b[22m\n\n\n   at ..\\pages\\common\\Footer.ts:255\n\n  253 |         for (let i = 0; i < count; i++) {\n  254 |             const header = sections.nth(i).locator('h3');\n> 255 |             const text = await header.innerText();\n      |                                       ^\n  256 |             if (text.includes('Connected') || text.includes('αñ£αÑüαñíαñ╝αÑçαñé')) {\n  257 |                 socialSection = sections.nth(i);\n  258 |                 break;\n    at Footer.verifySocialSection (C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts:255:39)\n    at C:\\Users\\Inno\\Desktop\\Infra\\src\\tests\\home\\footer.spec.ts:176:17"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:21.786Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\Inno\\Desktop\\Infra\\test-results\\home-footer-91infra-Footer-551ab-et-Connected-social-section-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                        "column": 39,
+                        "line": 255
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-6921a0a84c879cc914de",
+              "file": "home/footer.spec.ts",
+              "line": 174,
+              "column": 13
+            },
+            {
+              "title": "should have clickable links in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 3743,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:21.964Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-79f5f6644eb894ac6920",
+              "file": "home/footer.spec.ts",
+              "line": 183,
+              "column": 13
+            },
+            {
+              "title": "should verify footer position at bottom of page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1098,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:22.006Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-2bf966cc380748c46855",
+              "file": "home/footer.spec.ts",
+              "line": 199,
+              "column": 13
+            },
+            {
+              "title": "should display footer description text",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 899,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:23.129Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-d645449b9fec082c9f33",
+              "file": "home/footer.spec.ts",
+              "line": 203,
+              "column": 13
+            },
+            {
+              "title": "should verify footer links do not have broken hrefs",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1284,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:25.475Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-65c28edfea6dbfa0800b",
+              "file": "home/footer.spec.ts",
+              "line": 213,
+              "column": 13
+            },
+            {
+              "title": "should have footer section titles in correct language",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1041,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:25.476Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-e407dda8cf423e4efa38",
+              "file": "home/footer.spec.ts",
+              "line": 230,
+              "column": 13
+            },
+            {
+              "title": "should verify footer links have correct href pattern for locale",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 684,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:24.078Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-4562bbae51407e4496e5",
+              "file": "home/footer.spec.ts",
+              "line": 248,
+              "column": 13
+            },
+            {
+              "title": "should display footer with proper styling (grid or flex layout)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 651,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:24.784Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-a969fc17731ea27a82fd",
+              "file": "home/footer.spec.ts",
+              "line": 264,
+              "column": 13
+            },
+            {
+              "title": "should have responsive column layout",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 848,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:25.456Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-3ee25f45d393e8596cf6",
+              "file": "home/footer.spec.ts",
+              "line": 276,
+              "column": 13
+            }
+          ]
+        },
+        {
+          "title": "91infra Footer Tests - Hindi (hi)",
+          "file": "home/footer.spec.ts",
+          "line": 8,
+          "column": 10,
+          "specs": [
+            {
+              "title": "should display Footer container and structure",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1625,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:25.730Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-d83a2a9c99b72de9b949",
+              "file": "home/footer.spec.ts",
+              "line": 20,
+              "column": 13
+            },
+            {
+              "title": "should display responsive grid layout",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1028,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:26.323Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-4fda241984c7236b616c",
+              "file": "home/footer.spec.ts",
+              "line": 24,
+              "column": 13
+            },
+            {
+              "title": "should display logo section with correct image",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1768,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:26.719Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-b7f50066f0d32152f563",
+              "file": "home/footer.spec.ts",
+              "line": 28,
+              "column": 13
+            },
+            {
+              "title": "should display footer description text correctly",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1447,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:26.950Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-1a915cc461073d0b1faf",
+              "file": "home/footer.spec.ts",
+              "line": 37,
+              "column": 13
+            },
+            {
+              "title": "should display \"About 91Infra\" section with correct title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1266,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:27.376Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-5816cea01b525e5d9c96",
+              "file": "home/footer.spec.ts",
+              "line": 45,
+              "column": 13
+            },
+            {
+              "title": "should verify \"About Us\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 655,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:27.384Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-74fc99b6a93a5a13171d",
+              "file": "home/footer.spec.ts",
+              "line": 53,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Contact Us\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 803,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:28.063Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-0baa58c76258bf00be09",
+              "file": "home/footer.spec.ts",
+              "line": 64,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Privacy Policy\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1088,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:28.427Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-4b6d7e143d1ad0a01b61",
+              "file": "home/footer.spec.ts",
+              "line": 75,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Terms & Conditions\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 985,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:28.525Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-ebc83481e8ff20886c70",
+              "file": "home/footer.spec.ts",
+              "line": 86,
+              "column": 13
+            },
+            {
+              "title": "should display \"Work With Us\" section with correct title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 1978,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:28.673Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-13673876f9bfc35cc77a",
+              "file": "home/footer.spec.ts",
+              "line": 97,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Advertise With Us\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1826,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:28.887Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-f319159f8e8a906b3249",
+              "file": "home/footer.spec.ts",
+              "line": 105,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Feedback\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 924,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:29.540Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-88611ae20f836f28d6ae",
+              "file": "home/footer.spec.ts",
+              "line": 116,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Career\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 908,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:29.544Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-323845b7a29c6675a5c6",
+              "file": "home/footer.spec.ts",
+              "line": 127,
+              "column": 13
+            },
+            {
+              "title": "should display \"Useful Links\" section with correct title",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1354,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:30.479Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-9462379e518f03de6f71",
+              "file": "home/footer.spec.ts",
+              "line": 138,
+              "column": 13
+            },
+            {
+              "title": "should verify \"Construction Equipments\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1285,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:30.493Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-9a6d55034286f8411b7d",
+              "file": "home/footer.spec.ts",
+              "line": 146,
+              "column": 13
+            },
+            {
+              "title": "should verify \"News\" link in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 925,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:30.675Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-4a70639d23a5402db5d1",
+              "file": "home/footer.spec.ts",
+              "line": 157,
+              "column": 13
+            },
+            {
+              "title": "should display \"Our Partner Website\" section with logos",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 1262,
+                      "error": {
+                        "message": "Error: [AssertionError] Partner section not found",
+                        "stack": "Error: [AssertionError] Partner section not found\n    at Footer.verifyPartnerSection (C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts:231:19)\n    at C:\\Users\\Inno\\Desktop\\Infra\\src\\tests\\home\\footer.spec.ts:170:17",
+                        "location": {
+                          "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                          "column": 19,
+                          "line": 231
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\common\\Footer.ts:231\n\n\u001b[0m \u001b[90m 229 |\u001b[39m\n \u001b[90m 230 |\u001b[39m         \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39mpartnerSection) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 231 |\u001b[39m             \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'[AssertionError] Partner section not found'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 232 |\u001b[39m         }\n \u001b[90m 233 |\u001b[39m\n \u001b[90m 234 |\u001b[39m         \u001b[36mawait\u001b[39m assertVisible(partnerSection\u001b[33m,\u001b[39m \u001b[32m'partner section'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                            "column": 19,
+                            "line": 231
+                          },
+                          "message": "Error: [AssertionError] Partner section not found\n\n   at ..\\pages\\common\\Footer.ts:231\n\n  229 |\n  230 |         if (!partnerSection) {\n> 231 |             throw new Error('[AssertionError] Partner section not found');\n      |                   ^\n  232 |         }\n  233 |\n  234 |         await assertVisible(partnerSection, 'partner section');\n    at Footer.verifyPartnerSection (C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts:231:19)\n    at C:\\Users\\Inno\\Desktop\\Infra\\src\\tests\\home\\footer.spec.ts:170:17"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:30.733Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\Inno\\Desktop\\Infra\\test-results\\home-footer-91infra-Footer-56b72--Website-section-with-logos-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                        "column": 19,
+                        "line": 231
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-dd50540ad39cd87a707f",
+              "file": "home/footer.spec.ts",
+              "line": 168,
+              "column": 13
+            },
+            {
+              "title": "should display \"Get Connected\" social section",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 976,
+                      "error": {
+                        "message": "Error: [AssertionError] Social section not found",
+                        "stack": "Error: [AssertionError] Social section not found\n    at Footer.verifySocialSection (C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts:263:19)\n    at C:\\Users\\Inno\\Desktop\\Infra\\src\\tests\\home\\footer.spec.ts:176:17",
+                        "location": {
+                          "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                          "column": 19,
+                          "line": 263
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\common\\Footer.ts:263\n\n\u001b[0m \u001b[90m 261 |\u001b[39m\n \u001b[90m 262 |\u001b[39m         \u001b[36mif\u001b[39m (\u001b[33m!\u001b[39msocialSection) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 263 |\u001b[39m             \u001b[36mthrow\u001b[39m \u001b[36mnew\u001b[39m \u001b[33mError\u001b[39m(\u001b[32m'[AssertionError] Social section not found'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                   \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 264 |\u001b[39m         }\n \u001b[90m 265 |\u001b[39m\n \u001b[90m 266 |\u001b[39m         \u001b[36mawait\u001b[39m assertVisible(socialSection\u001b[33m,\u001b[39m \u001b[32m'social section'\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                            "column": 19,
+                            "line": 263
+                          },
+                          "message": "Error: [AssertionError] Social section not found\n\n   at ..\\pages\\common\\Footer.ts:263\n\n  261 |\n  262 |         if (!socialSection) {\n> 263 |             throw new Error('[AssertionError] Social section not found');\n      |                   ^\n  264 |         }\n  265 |\n  266 |         await assertVisible(socialSection, 'social section');\n    at Footer.verifySocialSection (C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts:263:19)\n    at C:\\Users\\Inno\\Desktop\\Infra\\src\\tests\\home\\footer.spec.ts:176:17"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:31.647Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\Inno\\Desktop\\Infra\\test-results\\home-footer-91infra-Footer-0b988-et-Connected-social-section-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\Inno\\Desktop\\Infra\\src\\pages\\common\\Footer.ts",
+                        "column": 19,
+                        "line": 263
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-9af460b019893198c3fe",
+              "file": "home/footer.spec.ts",
+              "line": 174,
+              "column": 13
+            },
+            {
+              "title": "should have clickable links in footer",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 3684,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:31.823Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-e688ed31a803f28df130",
+              "file": "home/footer.spec.ts",
+              "line": 183,
+              "column": 13
+            },
+            {
+              "title": "should verify footer position at bottom of page",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 1845,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:31.869Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-d627ea33cfc6faee36f3",
+              "file": "home/footer.spec.ts",
+              "line": 199,
+              "column": 13
+            },
+            {
+              "title": "should display footer description text",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 1113,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:34.877Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-6c0eb31e1e286f6e806b",
+              "file": "home/footer.spec.ts",
+              "line": 203,
+              "column": 13
+            },
+            {
+              "title": "should verify footer links do not have broken hrefs",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 811,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:35.279Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-dc2f45ec70711ffec0d5",
+              "file": "home/footer.spec.ts",
+              "line": 213,
+              "column": 13
+            },
+            {
+              "title": "should have footer section titles in correct language",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 631,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:33.739Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-0b4eea9ab0e8250ba688",
+              "file": "home/footer.spec.ts",
+              "line": 230,
+              "column": 13
+            },
+            {
+              "title": "should verify footer links have correct href pattern for locale",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 561,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:34.395Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-e7f0a8be7d784f3fd799",
+              "file": "home/footer.spec.ts",
+              "line": 248,
+              "column": 13
+            },
+            {
+              "title": "should display footer with proper styling (grid or flex layout)",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 797,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:34.978Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-86803164af5bd9eb3f81",
+              "file": "home/footer.spec.ts",
+              "line": 264,
+              "column": 13
+            },
+            {
+              "title": "should have responsive column layout",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 1007,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-01-15T09:50:35.535Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "7eaa11eb0dba5767e823-b2af18d5d2daf487e681",
+              "file": "home/footer.spec.ts",
+              "line": 276,
+              "column": 13
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-01-15T09:50:06.319Z",
+    "duration": 30361.15,
+    "expected": 72,
+    "skipped": 0,
+    "unexpected": 6,
+    "flaky": 0
+  }
+}

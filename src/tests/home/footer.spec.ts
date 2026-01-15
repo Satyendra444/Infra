@@ -165,6 +165,21 @@ LOCALES.forEach(({ path, name, footer: footerData }) => {
             }
         });
 
+        test('should display "Our Partner Website" section with logos', async () => {
+            if (footerData?.sections?.partners) {
+                await footer.verifyPartnerSection(footerData.sections.partners.links);
+            }
+        });
+
+        test('should display "Get Connected" social section', async () => {
+            if (footerData?.sections?.social) {
+                await footer.verifySocialSection({
+                    title: footerData.sections.social.title,
+                    icons: footerData.sections.social.icons
+                });
+            }
+        });
+
         test('should have clickable links in footer', async ({ page }) => {
             // Test clicking on one of the links and verify navigation
             if (footerData?.sections?.about?.links && footerData.sections.about.links.length > 0) {
