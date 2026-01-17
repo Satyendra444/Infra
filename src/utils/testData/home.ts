@@ -97,7 +97,7 @@ export const HI_HOME: HomePageData = {
         ogTitle: 'नए निर्माण उपकरण, भारत में नवीनतम वाणिज्यिक वाहन समाचार',
         ogDescription: 'निर्माण उपकरण खरीदने की सोच रहे हैं? 91इन्फ्रा आपको एक ही स्थान पर समीक्षा, विशिष्टताओं, ग्राहक रेटिंग के साथ शोध करने में मदद करता है।',
         ogImage: 'https://images.91infra.com/banner/91infra-masthead-without-logo1440x450png_1716197957.png',
-        ogUrl: 'https://www.91infra.com/',
+        ogUrl: 'https://www.91infra.com//hi',
         ogType: 'website',
         twitterTitle: 'नए निर्माण उपकरण, भारत में नवीनतम वाणिज्यिक वाहन समाचार',
         twitterDescription: 'निर्माण उपकरण खरीदने की सोच रहे हैं? 91इन्फ्रा आपको एक ही स्थान पर समीक्षा, विशिष्टताओं, ग्राहक रेटिंग के साथ शोध करने में मदद करता है।',

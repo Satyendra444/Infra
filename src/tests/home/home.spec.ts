@@ -79,7 +79,7 @@ LOCALES.forEach((locale) => {
             expect(orgEntity.contactPoint).toBeDefined();
             expect(orgEntity.contactPoint['@type']).toBe('ContactPoint');
             expect(orgEntity.contactPoint.telephone).toBeDefined();
-            expect(orgEntity.contactPoint.contactType).toBe('Customer service');
+            expect(orgEntity.contactPoint.contactType).toBe('Customer Service');
 
             // Same As
             expect(Array.isArray(orgEntity.sameAs)).toBe(true);
